@@ -2,6 +2,7 @@ const Discord = require("discord.js");
 const client = new Discord.Client({
     disableEveryone : true
 });
+let ownerID=process.env.OWNERID;
 let express = require('express');
 let https = require('https');
 let expsApp = express();
