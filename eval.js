@@ -1,4 +1,4 @@
-exports.run = (msg,Discord,client,color) => {
+exports.run = (msg,Discord,client,color,ownerID) => {
   if(msg.author.id==ownerID){
     const arrrrg = msg.content.split(" ").slice(1);
     const chk=msg.content.split('.');
