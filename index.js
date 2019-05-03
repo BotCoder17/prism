@@ -60,8 +60,12 @@ client.on("message", (msg) => {
             pn.run(Discord,client,msg);
         break;
         case 'youtube':case 'ytsearch':
-            let yt=require('./yt.js'); //yt search
+            let yt=require('./yt.js');
             yt.run(msg,client,Discord,color,arg1);
+        break;
+        case 'reboot':
+            let rb=require('./reset.js');
+            rb.run(msg,client,Discord,color,pf);
         break;
     }
 });
