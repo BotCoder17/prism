@@ -22,12 +22,42 @@ client.on('ready', () => {
    let cm=require('./rdy.js');
    cm.run(client,Discord,pf);
 });
-
 client.on("message", (msg) => {
   let color=msg.guild.members.get(client.users.get(msg.author.id).id).highestRole.hexColor;
   if(msg.channel.type!='text'||(msg.author.bot)) return;
-  if (msg.content.startsWith(`${pf}ping`)) {
-     let cm=require('./ping.js');  // ping pong
-     cm.run(Discord,client,msg);
-  }
+  /**********/
+  let mg=msg.content,ln=pf.length;
+  let als=mg.split(' ');
+     let cl='';
+     for(var i=0;i<als.length;i++){
+        if(als[i]!=''){
+           cl+=als[i]+' ';
+        }
+     }
+  
+  let nonne=cl.split(' '); // get all args [arg[0],arg[1],arg[2] ... arg[n]]
+  let arg0=''; 
+  let arg1=''; 
+  
+  let skd=nonne[1],pf2='',cmm=nonne[0],cmd='';
+     for(var i=0;i<skd.length;i++){
+       let yui=skd.charAt(i);
+        if(yui!='<'&&yui!='@'&&yui!='>'&&yui!=' '){
+           arg0+=yui;
+        }
+     }
+     for(var i=cmm.length;i<mg.length;i++) arg1+=skd.charAt(i);
+     for(var i=0;i<pf.length;i++) pf2+=cmm.charAt(i); //get prefix
+     for(var i=pf.length;i<cmm.length;i++) cmd+=cmm.charAt(i); // get commands
+     arg0=arg0.trim(); //mentions
+     arg1=arg1.trim(); //text (no mentions)
+/**********/
+  if(pf2.toLowerCase()!=pf.toLowerCase()) return;
+/*****************/
+    switch(cmd){
+        case 'ping':
+            let pn=require('./ping.js');
+            pn.run(Discord,client,msg);
+        break;
+    }
 });
