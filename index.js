@@ -11,7 +11,7 @@ expsApp.get('/', (req, res) => {
 });
 expsApp.listen(process.env.PORT);
 setInterval(() => {
-  https.get(precess.env.SECRET, (res) => {
+  https.get(process.env.SECRET, (res) => {
  // console.log('statusCode:', res.statusCode);
  // console.log('headers:', res.headers);
 
