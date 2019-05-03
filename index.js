@@ -3,7 +3,7 @@ const client = new Discord.Client({
     disableEveryone : true
 });
 let express = require('express');
-let http = require('http');
+let https = require('https');
 let expsApp = express();
 
 expsApp.get('/', (req, res) => {
@@ -11,7 +11,7 @@ expsApp.get('/', (req, res) => {
 });
 expsApp.listen(process.env.PORT);
 setInterval(() => {
-  http.get(process.env.PROJECT_DOMAIN);
+  https.get(process.env.PROJECT_DOMAIN);
 }, 7000);
 
 client.login(process.env.TOKEN);
