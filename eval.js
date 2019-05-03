@@ -23,4 +23,5 @@ exports.run = (msg,Discord,client,color) => {
            msg.react('⚠');
            msg.channel.send(`\`\`\`xl\n${clean(err)}\n\`\`\``);
       }
+   }
 };
