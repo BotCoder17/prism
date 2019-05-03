@@ -81,5 +81,9 @@ client.on("message", (msg) => {
             let av=require('./ava.js');
             av.run(msg,client,Discord,color,arg0);
         break;
+        case 'whois':
+            let wh=require('./userinfo.js');
+            wh.run(msg,client,Discord,color,arg0);
+        break;
     }
 });
