@@ -12,16 +12,10 @@ expsApp.get('/', (req, res) => {
 expsApp.listen(process.env.PORT);
 setInterval(() => {
   https.get(process.env.SECRET, (res) => {
- // console.log('statusCode:', res.statusCode);
- // console.log('headers:', res.headers);
-
- /* res.on('data', (d) => {
-    process.stdout.write(d);
-  });*/
-
-}).on('error', (e) => {
-  console.error(e);
-});
+   // :)
+  }).on('error', (e) => {
+    console.error(e);
+  });
 }, 7000);
 
 client.login(process.env.TOKEN);
@@ -85,5 +79,9 @@ client.on("message", (msg) => {
             let wh=require('./userinfo.js');
             wh.run(msg,client,Discord,color,arg0);
         break;
+        case 'ev':case 'eval':
+            let ev=require('./eval.js');
+            ev.run(msg,client,Discord,color);
+         break;
     }
 });
