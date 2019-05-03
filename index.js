@@ -11,7 +11,17 @@ expsApp.get('/', (req, res) => {
 });
 expsApp.listen(process.env.PORT);
 setInterval(() => {
-  https.get(process.env.PROJECT_DOMAIN);
+  https.get(precess.env.SECRET, (res) => {
+ // console.log('statusCode:', res.statusCode);
+ // console.log('headers:', res.headers);
+
+  res.on('data', (d) => {
+    process.stdout.write(d);
+  });
+
+}).on('error', (e) => {
+  console.error(e);
+});
 }, 7000);
 
 client.login(process.env.TOKEN);
