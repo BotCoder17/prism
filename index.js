@@ -61,7 +61,7 @@ client.on("message", (msg) => {
         break;
         case 'youtube':case 'ytsearch':
             let yt=require('./yt.js'); //yt search
-            yt.run(msg,client,Discord,color,pf);
+            yt.run(msg,client,Discord,color,arg1);
         break;
     }
 });
