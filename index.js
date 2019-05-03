@@ -69,13 +69,17 @@ client.on("message", (msg) => {
             let pn=require('./ping.js');
             pn.run(Discord,client,msg);
         break;
-        case 'youtube':case 'ytsearch':
+        case 'youtube':case 'ytsearch':case 'yt':
             let yt=require('./yt.js');
             yt.run(msg,client,Discord,color,arg1);
         break;
         case 'reboot':case 'reset':
             let rb=require('./reset.js');
             rb.run(msg,client,Discord,color,pf);
+        break;
+        case 'ava':case 'avatar':
+            let av=require('./ava.js');
+            av.run(msg,client,Discord,color,arg0);
         break;
     }
 });
