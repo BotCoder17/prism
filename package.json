@@ -26,8 +26,7 @@
   "author": "someone",
   "license": "MIT",
   "repository": {
-    "type: "git",
-    "url": "git+https://github.com/BotCoder17/prism/"
+    "url": "https://github.com/BotCoder17/prism"
   },
   "keywords": [],
   "description": ""
