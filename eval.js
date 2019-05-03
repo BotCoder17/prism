@@ -1,7 +1,5 @@
 exports.run = (msg,Discord,client,color) => {
-  client.fetchApplication()
-   .then(p => {
-  if(msg.author.id==p.owner.id){
+  if(msg.author.id==ownerID){
     const arrrrg = msg.content.split(" ").slice(1);
     const chk=msg.content.split('.');
     function clean(text) {
@@ -25,6 +23,4 @@ exports.run = (msg,Discord,client,color) => {
            msg.react('⚠');
            msg.channel.send(`\`\`\`xl\n${clean(err)}\n\`\`\``);
       }
-    }
-  }).catch(console.log);
 };
