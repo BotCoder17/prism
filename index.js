@@ -63,7 +63,7 @@ client.on("message", (msg) => {
             let yt=require('./yt.js');
             yt.run(msg,client,Discord,color,arg1);
         break;
-        case 'reboot':
+        case 'reboot':case 'reset':
             let rb=require('./reset.js');
             rb.run(msg,client,Discord,color,pf);
         break;
