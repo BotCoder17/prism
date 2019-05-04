@@ -70,7 +70,7 @@ client.on("message", (msg) => {
         break;
         case 'reboot':case 'reset':
             let rb=require('./reset.js');
-            rb.run(msg,client,Discord,color,pf,ownerID);
+            rb.run(msg,client,Discord,color,pf);
         break;
         case 'ava':case 'avatar':
             let av=require('./ava.js');
@@ -82,7 +82,9 @@ client.on("message", (msg) => {
         break;
         case 'ev':case 'eval':
             let ev=require('./eval.js');
-            ev.run(msg,client,Discord,color,ownerID);
+            ev.run(msg,client,Discord,color);
          break;
     }
+    let prm=require('./prism.js');  // bot info
+    prm.run(msg,client,Discord,color,pf);
 });
