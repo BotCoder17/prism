@@ -80,9 +80,6 @@ client.on("message", (msg) => {
       prm.run(msg,client,Discord,color,pf,arg0);
   }
 /*****************/
-    let prm=require('./prism.js');  // bot info
-    prm.run(msg,client,Discord,color,pf,arg0);
-    
     switch(cmd){
         case 'ping':
             let pn=require('./ping.js');
