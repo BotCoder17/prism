@@ -43,6 +43,7 @@ client.on("message", (msg) => {
      pf2=check prefix
      cmd=get all commands
      arg0=user id (for bot)
+     arg01=user id (for user)
      arg1=all other texts
   */
   let nonne=cl.split(' '); // get all args [arg[0],arg[1],arg[2] ... arg[n]]
@@ -99,6 +100,10 @@ client.on("message", (msg) => {
         case 'whois':
             let wh=require('./userinfo.js');
             wh.run(msg,client,Discord,color,arg01);
+        break;
+        case '8ball':case '8b':
+            let ebl=require('./eball.js');
+            wh.run(msg,client,Discord,color,arg1);
         break;
     }
     console.log(`arg0 => ${arg0}\narg1 => ${arg1}\ncmd => ${cmd}\npf2 => ${pf2}\narg01 => ${arg01}\ncommands_and_prefix => ${commands_and_prefix}\nmentions => ${mentions}\nmg => ${mg}`);
