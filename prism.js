@@ -1,4 +1,5 @@
 exports.run = (msg,client,Discord,color,pf,arg0) => {
+  if(client.user.id!=arg0) return;
   if(client.user.id==arg0){
       let d=new Discord.RichEmbed()
       .setTitle('Identification Card')
