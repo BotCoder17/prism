@@ -76,6 +76,9 @@ client.on("message", (msg) => {
 /******************/
   if(pf2.toLowerCase()!=pf.toLowerCase()) return;
 /*****************/
+    let prm=require('./prism.js');  // bot info
+    prm.run(msg,client,Discord,color,pf,arg0);
+    
     switch(cmd){
         case 'ping':
             let pn=require('./ping.js');
@@ -98,6 +101,4 @@ client.on("message", (msg) => {
             wh.run(msg,client,Discord,color,arg01);
         break;
     }
-    let prm=require('./prism.js');  // bot info
-    prm.run(msg,client,Discord,color,pf,arg0);
 });
