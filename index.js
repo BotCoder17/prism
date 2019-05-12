@@ -80,10 +80,6 @@ client.on("message", (msg) => {
             let wh=require('./userinfo.js');
             wh.run(msg,client,Discord,color,arg0);
         break;
-        case 'ev':case 'eval':
-            let ev=require('./eval.js');
-            ev.run(msg,client,Discord,color);
-         break;
     }
     let prm=require('./prism.js');  // bot info
     prm.run(msg,client,Discord,color,pf);
