@@ -1,6 +1,6 @@
-exports.run = (msg,client,Discord,color,arg0) => {
-    if(arg0!=''){
-       client.fetchUser(arg0)
+exports.run = (msg,client,Discord,color,arg01) => {
+    if(arg01!=''){
+       client.fetchUser(arg01)
          .then(u => {
            let avva=new Discord.RichEmbed()
            .setColor(color)
