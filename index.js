@@ -85,6 +85,10 @@ client.on("message", (msg) => {
             let pn=require('./ping.js');
             pn.run(Discord,client,msg);
         break;
+        case 'say':
+            let ssy=require('./say.js');
+            ssy.run(msg,arg1);
+        break;
         case 'youtube':case 'ytsearch':case 'yt':
             let yt=require('./yt.js');
             yt.run(msg,client,Discord,color,arg1);
