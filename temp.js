@@ -1,6 +1,6 @@
 exports.run = (msg,client,color,Discord,arg1) => {
    var weather = require('weather-js');
-   weather.find({search: yui, degreeType: 'C'}, function(err, result) {
+   weather.find({search: arg1, degreeType: 'C'}, function(err, result) {
       if(err) console.log(err);
       let j=JSON.stringify(result);
       let j2=JSON.parse(j);
