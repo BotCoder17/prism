@@ -10,5 +10,5 @@ exports.run = (msg,client,Discord,color,arg1) => {
       .setTimestamp(new Date())
       .setColor(color);
       msg.channel.send(r);
-  });
+  }).catch(console.log);
 }
