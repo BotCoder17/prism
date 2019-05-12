@@ -87,7 +87,7 @@ client.on("message", (msg) => {
         break;
         case 'weather':
             let wtr=require('./temp.js');
-            wtr.run(msg,color,Discord,client,arg1);
+            wtr.run(msg,client,color,Discord,arg1);
         break;
         case 'say':
             let ssy=require('./say.js');
