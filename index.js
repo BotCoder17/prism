@@ -70,7 +70,7 @@ client.on("message", (msg) => {
         break;
         case 'reboot':case 'reset':
             let rb=require('./reset.js');
-            rb.run(msg,client,Discord,color,pf);
+            rb.run(msg,client,Discord,color,pf,ownerID);
         break;
         case 'ava':case 'avatar':
             let av=require('./ava.js');
