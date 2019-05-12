@@ -1,7 +1,7 @@
 exports.run = (msg,client,Discord,color,pf,arg0) => {
   if(client.user.id!=arg0) return;
-  /*if(client.user.id==arg0){
-      let d=new Discord.RichEmbed()
+  if(client.user.id==arg0){
+   /*   let d=new Discord.RichEmbed()
       .setTitle('Identification Card')
       .setDescription(`Hey **${msg.author.username}**! type \`${pf}help\` for help!`)
       .setColor(color)
