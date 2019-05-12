@@ -103,7 +103,7 @@ client.on("message", (msg) => {
         break;
         case '8ball':case '8b':
             let ebl=require('./eball.js');
-            wh.run(msg,client,Discord,color,arg1);
+            ebl.run(msg,client,Discord,color,arg1);
         break;
     }
     console.log(`arg0 => ${arg0}\narg1 => ${arg1}\ncmd => ${cmd}\npf2 => ${pf2}\narg01 => ${arg01}\ncommands_and_prefix => ${commands_and_prefix}\nmentions => ${mentions}\nmg => ${mg}`);
