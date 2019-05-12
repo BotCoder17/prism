@@ -80,6 +80,7 @@ client.on("message", (msg) => {
       prm.run(msg,client,Discord,color,pf,arg0);
   }
 /*****************/
+ if(pf2.toLowerCase()==pf.toLowerCase()){
     switch(cmd){
         case 'ping':
             let pn=require('./ping.js');
@@ -114,5 +115,6 @@ client.on("message", (msg) => {
             ebl.run(msg,client,Discord,color,arg1);
         break;
     }
+}
     console.log(`arg0 => ${arg0}\narg1 => ${arg1}\ncmd => ${cmd}\npf2 => ${pf2}\narg01 => ${arg01}\ncommands_and_prefix => ${commands_and_prefix}\nmentions => ${mentions}\nmg => ${mg}`);
 });
