@@ -68,7 +68,7 @@ client.on("message", (msg) => {
     
      for(var i=commands_and_prefix.length;i<mg.length;i++) arg1+=mg.charAt(i); 
      for(var i=0;i<ln;i++) pf2+=commands_and_prefix.charAt(i); // get prefix
-     for(var i=ln;i<commands_and_prefix.length;i++) cmd+=cmm.charAt(i); // get commands
+     for(var i=ln;i<commands_and_prefix.length;i++) cmd+=commands_and_prefix.charAt(i); // get commands
      
      arg0=arg0.trim(); // mention of bot
      arg01=arg01.trim(); // user mention
