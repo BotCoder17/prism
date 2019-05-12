@@ -39,24 +39,41 @@ client.on("message", (msg) => {
            cl+=als[i]+' ';
         }
      }
-  
+  /**
+     pf2=check prefix
+     cmd=get all commands
+     arg0=user id (for bot)
+     arg1=all other texts
+  */
   let nonne=cl.split(' '); // get all args [arg[0],arg[1],arg[2] ... arg[n]]
-  let arg0=''; 
-  let arg1=''; 
+  let arg0='',arg01='';
+  let arg1=''; // all other arguments
+  let mntns=''; // mentions
   
-  let skd=nonne[1],pf2='',cmm=nonne[0],cmd='';
-     for(var i=0;i<skd.length;i++){
-       let yui=skd.charAt(i);
+  let commands_and_prefix=nonne[0],mentions=nonne[1],pf2='',cmd='';
+    
+     for(var i=0;i<commands_and_prefix.length;i++){
+       let yui=commands_and_prefix.charAt(i);
         if(yui!='<'&&yui!='@'&&yui!='>'&&yui!=' '){
-           arg0+=yui;
+           arg0+=yui;  // user id (of bot)
         }
      }
-     for(var i=cmm.length;i<mg.length;i++) arg1+=skd.charAt(i);
-     for(var i=0;i<pf.length;i++) pf2+=cmm.charAt(i); //get prefix
-     for(var i=pf.length;i<cmm.length;i++) cmd+=cmm.charAt(i); // get commands
-     arg0=arg0.trim(); //mentions
-     arg1=arg1.trim(); //text (no mentions)
-/**********/
+    
+    for(var i=0;i<mentions.length;i++){
+       let yui=mentions.charAt(i);
+        if(yui!='<'&&yui!='@'&&yui!='>'&&yui!=' '){
+           arg01+=yui;  // user id (of user)
+        }
+     }
+    
+     for(var i=commands_and_prefix.length;i<mg.length;i++) arg1+=mg.charAt(i); 
+     for(var i=0;i<ln;i++) pf2+=commands_and_prefix.charAt(i); // get prefix
+     for(var i=ln;i<commands_and_prefix.length;i++) cmd+=cmm.charAt(i); // get commands
+     
+     arg0=arg0.trim(); // mention of bot
+     arg01=arg01.trim(); // user mention
+     arg1=arg1.trim(); // text (no mentions)
+/******************/
   if(pf2.toLowerCase()!=pf.toLowerCase()) return;
 /*****************/
     switch(cmd){
@@ -74,11 +91,11 @@ client.on("message", (msg) => {
         break;
         case 'ava':case 'avatar':
             let av=require('./ava.js');
-            av.run(msg,client,Discord,color,arg0);
+            av.run(msg,client,Discord,color,arg01);
         break;
         case 'whois':
             let wh=require('./userinfo.js');
-            wh.run(msg,client,Discord,color,arg0);
+            wh.run(msg,client,Discord,color,arg01);
         break;
     }
     let prm=require('./prism.js');  // bot info
