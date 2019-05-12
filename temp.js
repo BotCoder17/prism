@@ -13,5 +13,5 @@ exports.run = (msg,client,color,Discord,arg1) => {
       .setTimestamp(new Date())
       .setThumbnail(j2[0].current.imageUrl)
      msg.channel.send(ds);
-    });
+    }).catch(console.log);
 }
