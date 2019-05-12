@@ -13,7 +13,7 @@ exports.run = (msg,client,color,Discord,arg1) => {
      .setColor(color)
      .setFooter(`Requested by ${msg.author.username}`,msg.author.avatarURL)
      .setTimestamp(new Date())
-     .setThumbnail(j2[0].current.imageUrl);
+     .setThumbnail(j2[0].current.imageUrl)
      msg.channel.send(ds);
     });
 }
