@@ -85,6 +85,10 @@ client.on("message", (msg) => {
             let pn=require('./ping.js');
             pn.run(Discord,client,msg);
         break;
+        case 'weather':
+            let wtr=require('./temp.js');
+            wtr.run(msg,color,Discord,client,arg1);
+        break;
         case 'say':
             let ssy=require('./say.js');
             ssy.run(msg,arg1);
