@@ -76,6 +76,7 @@ client.on("message", (msg) => {
 /******************/
   if(pf2.toLowerCase()!=pf.toLowerCase()) return;
 /*****************/
+    console.log(arg0);
     let prm=require('./prism.js');  // bot info
     prm.run(msg,client,Discord,color,pf,arg0);
     
