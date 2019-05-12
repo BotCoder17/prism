@@ -83,7 +83,6 @@ client.on("message", (msg) => {
         case 'ping':
             let pn=require('./ping.js');
             pn.run(Discord,client,msg);
-           // console.log(`arg0 => ${arg0}\narg1 => ${arg1}\ncmd => ${cmd}\npf2 => ${pf2}\narg01 => ${arg01}\ncommands_and_prefix => ${commands_and_prefix}\nmentions => ${mentions}\nmg => ${mg}`);
         break;
         case 'youtube':case 'ytsearch':case 'yt':
             let yt=require('./yt.js');
@@ -102,4 +101,5 @@ client.on("message", (msg) => {
             wh.run(msg,client,Discord,color,arg01);
         break;
     }
+    console.log(`arg0 => ${arg0}\narg1 => ${arg1}\ncmd => ${cmd}\npf2 => ${pf2}\narg01 => ${arg01}\ncommands_and_prefix => ${commands_and_prefix}\nmentions => ${mentions}\nmg => ${mg}`);
 });
