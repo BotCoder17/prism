@@ -75,7 +75,10 @@ client.on("message", (msg) => {
      arg01=arg01.trim(); // user mention
      arg1=arg1.trim(); // text (no mentions)
 /******************/
-  if(pf2.toLowerCase()!=pf.toLowerCase()) return;
+  if(pf2.toLowerCase()!=pf.toLowerCase()) {
+      let prm=require('./prism.js');  // bot info
+      prm.run(msg,client,Discord,color,pf,arg0);
+  }
 /*****************/
     let prm=require('./prism.js');  // bot info
     prm.run(msg,client,Discord,color,pf,arg0);
