@@ -82,5 +82,5 @@ client.on("message", (msg) => {
         break;
     }
     let prm=require('./prism.js');  // bot info
-    prm.run(msg,client,Discord,color,pf);
+    prm.run(msg,client,Discord,color,pf,arg0);
 });
