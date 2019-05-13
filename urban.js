@@ -1,4 +1,5 @@
 exports.run = (msg,Discord,client,color,arg1) => {
+    var urban = require('urban');
     urban(arg1).first(function(ub) {
          try{
             let uby=ub.definition,def='',uex=ub.example,uexx='';
