@@ -83,16 +83,20 @@ client.on("message", (msg) => {
  if(pf2.toLowerCase()==pf.toLowerCase()){
     switch(cmd){
         case 'ping':
-            let pn=require('./ping.js');
-            pn.run(Discord,client,msg);
+            let ping=require('./ping.js');
+            ping.run(Discord,client,msg);
+        break;
+        case 'emoji':
+            let emoji=require('./emoji.js');
+            emoji.run(msg,Discord,client,color,arg01);
         break;
         case 'weather':
-            let wtr=require('./temp.js');
-            wtr.run(msg,client,color,Discord,arg1);
+            let weather=require('./temp.js');
+            weather.run(msg,client,color,Discord,arg1);
         break;
         case 'say':
-            let ssy=require('./say.js');
-            ssy.run(msg,arg1);
+            let say=require('./say.js');
+            say.run(msg,arg1);
         break;
         case 'youtube':case 'ytsearch':case 'yt':
             let yt=require('./yt.js');
@@ -103,16 +107,16 @@ client.on("message", (msg) => {
             rb.run(msg,client,Discord,color,pf,ownerID);
         break;
         case 'ava':case 'avatar':
-            let av=require('./ava.js');
-            av.run(msg,client,Discord,color,arg01);
+            let ava=require('./ava.js');
+            ava.run(msg,client,Discord,color,arg01);
         break;
         case 'whois':
-            let wh=require('./userinfo.js');
-            wh.run(msg,client,Discord,color,arg01);
+            let whois=require('./userinfo.js');
+            whois.run(msg,client,Discord,color,arg01);
         break;
         case '8ball':case '8b':
-            let ebl=require('./eball.js');
-            ebl.run(msg,client,Discord,color,arg1);
+            let eball=require('./eball.js');
+            eball.run(msg,client,Discord,color,arg1);
         break;
     }
 }
