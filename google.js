@@ -17,7 +17,7 @@ exports.run = (msg,Discord,client,color,arg1) => {
           var x = (res.links[i].title==null)?'':(res.links[i].title).trim(); // title
           var y = (res.links[i].description==null)?'':(res.links[i].description).trim(); //  description
           var z = (res.links[i].href==null)?'':res.links[i].href.trim(); // link
-          titles[i] = (x==''||x==null)?`Search for ${yui}`:x;
+          titles[i] = (x==''||x==null)?`Search for ${arg1}`:x;
           desc[i] = (y==''||y==null)?'Click here':y;
           links[i] = (z==''||z==null)?res.url:z;
           for(var j=i;j<=i;j++){
