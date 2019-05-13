@@ -13,7 +13,7 @@ exports.run = (msg,client,Discord,color,arg1,pf) => {
              .setFooter(`Requested by ${msg.author.username}`,msg.author.avatarURL)
          msg.channel.send(dc);
     }else{
-      msg.channel.send(`I failed to search the word ${res} from general dictionary, oh but wait... u can try to find the meaning on urban dictionary.\nDo \`${pf}urban ${res}\` for that`);
+      msg.channel.send(`I failed to search the word **${arg1}** from general dictionary, oh but wait... u can try to find the meaning on urban dictionary.\nDo \`${pf}urban ${arg1}\` for that`);
     }
 });
    }catch(err){
