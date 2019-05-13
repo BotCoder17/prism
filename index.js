@@ -86,6 +86,10 @@ client.on("message", (msg) => {
             let ping=require('./ping.js');
             ping.run(Discord,client,msg);
         break;
+        case 'google':
+            let google=require('./google.js');
+            google.run(msg,Discord,client,color,arg1);
+        break;
         case 'trn': case 'translate':
             let trn=require('./trn.js');
             trn.run(msg,Discord,client,color,arg1);
