@@ -1,7 +1,7 @@
 exports.run = (msg,client,color,Discord,arg1) => {
    var weather = require('weather-js');
    weather.find({search: arg1, degreeType: 'C'}, function(err, result) {
-      if(err) console.log(err);
+      if(err){ console.log(err); return;}
       let j2=JSON.parse(JSON.stringify(result));
       let ds=new Discord.RichEmbed()
       .setTitle(`Weather Forecast`)
@@ -13,5 +13,5 @@ exports.run = (msg,client,color,Discord,arg1) => {
       .setTimestamp(new Date())
       .setThumbnail(j2[0].current.imageUrl)
      msg.channel.send(ds);
-    }).catch(console.log);
+    });
 }
