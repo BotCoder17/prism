@@ -110,6 +110,10 @@ client.on("message", (msg) => {
             let yt=require('./yt.js');
             yt.run(msg,client,Discord,color,arg1);
         break;
+        case 'ub': case 'urban':
+            let urban=require('./urban.js');
+            urban.run(msg,Discord,client,color,arg1);
+        break;
         case 'reboot':case 'reset':
             let rb=require('./reset.js');
             rb.run(msg,client,Discord,color,pf,ownerID);
