@@ -4,7 +4,7 @@ exports.run = (msg,Discord,client,color,arg1) => {
      var titles = new Array();
      var desc = new Array();
      var links = new Array();
-     if(yui=='') return;
+     if(arg1=='') return;
      google(arg1, (err, res) => {
         if (err) console.error(err)
         var t=new Discord.RichEmbed()
