@@ -88,7 +88,7 @@ client.on("message", (msg) => {
         break;
         case 'dict': case 'dictionary':
             let dict=require('./dict.js');
-            dict.run(msg,client,Discord,color,arg1);
+            dict.run(msg,client,Discord,color,arg1,pf);
         break;
         case 'ev': case 'eval':
             let eval=require('./eval.js');
