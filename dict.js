@@ -4,7 +4,7 @@ exports.run = (msg,client,Discord,color,arg1,pf) => {
       df.getDef(arg1, "en", null, function(def) {
          if(def.definition!=undefined){
            let dc=new Discord.RichEmbed()
-             .setTitle(`Dictionary search for \`${res}\``)
+             .setTitle(`Dictionary search for \`${arg1}\``)
              .setDescription(def.definition)
              .addField(`Type`,def.category)
              .addField(`Suitable word`,def.word)
