@@ -5,12 +5,12 @@ const client = new Discord.Client({
 let ownerID=process.env.OWNERID;
 let express = require('express');
 let https = require('https');
-let expsApp = express();
+let ex = express();
 
-expsApp.get('/', (req, res) => {
+ex.get('/', (req, res) => {
   res.sendStatus(200);
 });
-expsApp.listen(process.env.PORT);
+ex.listen(process.env.PORT);
 setInterval(() => {
   https.get(process.env.SECRET, (res) => {
    // :)
@@ -85,6 +85,10 @@ client.on("message", (msg) => {
         case 'ping':
             let ping=require('./ping.js');
             ping.run(Discord,client,msg);
+        break;
+        case 'ev': case 'eval':
+            let eval=require('./eval.js');
+            eval.run(msg,client,Discord,color,ownerID);
         break;
         case 'emoji':
             let emoji=require('./emoji.js');
