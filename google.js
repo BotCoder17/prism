@@ -6,9 +6,9 @@ exports.run = (msg,Discord,client,color,arg1) => {
      var links = new Array();
      if(arg1=='') return;
      google(arg1, (err, res) => {
-        if (err) console.error(err)
+        if (err) console.log(err);
         var t=new Discord.RichEmbed()
-        .setTitle(`Google serch for ${res.query}`)
+        .setTitle(`Google serch for ${arg1}`)
         .setDescription(`Hey ${msg.author.username}! Click on any link below to find out the result, for more, [Click Here](${res.url})`)
         .setColor(color)
         .setTimestamp(new Date())
