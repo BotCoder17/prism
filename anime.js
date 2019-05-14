@@ -1,4 +1,4 @@
-exports.run = (msg,Discord,client,cmd,arg01) => {
+exports.run = (msg,Discord,client,color,cmd,arg01) => {
    const weeb = require('node-weeb');
    const sr = require('./sfw.json');
    if(arg01!=''){
