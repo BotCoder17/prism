@@ -82,7 +82,7 @@ client.on("message", (msg) => {
 /*****************/
  if(pf2.toLowerCase()==pf.toLowerCase()){
     let anime=require('./anime.js');
-    anime.run(msg,Discord,client,cmd,arg01);
+    anime.run(msg,Discord,client,color,cmd,arg01);
     switch(cmd){
         case 'ping':
             let ping=require('./ping.js');
