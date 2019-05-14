@@ -8,13 +8,14 @@ exports.run = (msg,Discord,client,cmd,arg01) => {
           case 'tickle':
              weeb.nekoLife(sr.sfw.tickle, 'img')
                .then(res => {
-            let r=new Discord.RichEmbed()
-           .setTimestamp(new Date())
-           .setTitle(`${msg.author.username} tickles u, ${u.username}`)
-           .setFooter(`from ${msg.author.username}`,msg.author.avatarURL)
-           .setImage(JSON.parse(res).url)
-           .setColor(color);
-            msg.channel.send(r);
+                  let r=new Discord.RichEmbed()
+                 .setTimestamp(new Date())
+                 .setTitle(`${msg.author.username} tickles u, ${u.username}`)
+                 .setFooter(`from ${msg.author.username}`,msg.author.avatarURL)
+                 .setImage(JSON.parse(res).url)
+                 .setColor(color);
+                  msg.channel.send(r);
+               }).catch(console.log);
           break;
         }
      }).catch(console.log);
