@@ -11,6 +11,7 @@
     "node-google-translate-skidz": "^1.1.2",
     "express": "^4.16.4",
     "howler": "^2.1.2",
+    "pornsearch": "^2.4.3",
     "node-opus": "^0.3.1",
     "opusscript": "^0.0.6",
     "request": "^2.88.0",
