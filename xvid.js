@@ -13,5 +13,5 @@ exports.run = (msg,Discord,client,arg1,color) => {
         }).catch((err) => {
              console.log(err);
              msg.channel.send(`Can't find the result for the search **${arg1}**`)
-        });;
+        });
 }
