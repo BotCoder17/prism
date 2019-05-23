@@ -10,5 +10,8 @@ exports.run = (msg,Discord,client,arg1,color) => {
             .setTitle(gifs[g].title)
             .setColor(color)
             msg.channel.send(gif)
+        }).catch((err) => {
+             console.log(err);
+             msg.channel.send(`Can't find the result for the search **${arg1}**`)
         });
 }
