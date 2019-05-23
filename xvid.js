@@ -1,3 +1,14 @@
 exports.run = (msg,Discord,client,arg1,color) => {
-    
+    if(!client.channels.get(msg.channel.id).nsfw) return msg.channel.send(`U can view this only in NSFW enabled channels`);
+     const Pornsearch = require('pornsearch');
+     const Searcher = new Pornsearch(arg1);
+     Searcher.videos()
+       .then(videos => {
+            let v=Math.floor(Math.random()*videos.length)+1;
+            let video=new Discord.RichEmbed()
+            .setImage(videos[v].url)
+            .setTitle(videos[v].title)
+            .setColor(color)
+            msg.channel.send(video)
+        });
 }
