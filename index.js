@@ -84,6 +84,14 @@ client.on("message", (msg) => {
     let anime=require('./anime.js');
     anime.run(msg,Discord,client,color,cmd,arg01);
     switch(cmd){
+        case 'xvid': case 'xvideo':
+            let xvid=require('./xvid.js');
+            xvid.run(msg,Discord,client,arg1);
+        break;
+        case 'xgif':
+            let xgif=require('./xgif.js');
+            xgif.run(msg,Discord,client,arg1);
+        break;
         case 'ping':
             let ping=require('./ping.js');
             ping.run(Discord,client,msg);
