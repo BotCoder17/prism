@@ -86,11 +86,11 @@ client.on("message", (msg) => {
     switch(cmd){
         case 'xvid': case 'xvideo':
             let xvid=require('./xvid.js');
-            xvid.run(msg,Discord,client,arg1);
+            xvid.run(msg,Discord,client,arg1,color);
         break;
         case 'xgif':
             let xgif=require('./xgif.js');
-            xgif.run(msg,Discord,client,arg1);
+            xgif.run(msg,Discord,client,arg1,color);
         break;
         case 'ping':
             let ping=require('./ping.js');
