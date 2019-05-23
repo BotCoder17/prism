@@ -6,7 +6,7 @@ exports.run = (msg,Discord,client,arg1,color) => {
        .then(videos => {
             let v=Math.floor(Math.random()*videos.length)+1;
             let video=new Discord.RichEmbed()
-            .setTitle(videos[v].title).setURL(videos[v].url)
+            .setTitle(`[CLICK HERE] ${videos[v].title}`).setURL(videos[v].url)
             .setImage(videos[v].thumb)
             .setColor(color)
             msg.channel.send(video)
