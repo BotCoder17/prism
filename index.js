@@ -74,6 +74,7 @@ client.on("message", (msg) => {
      arg0=arg0.trim(); // mention of bot
      arg01=arg01.trim(); // user mention
      arg1=arg1.trim(); // text (no mentions)
+try{
 /******************/
   if(pf2.toLowerCase()!=pf.toLowerCase()) {
       let prm=require('./prism.js');  // bot info
@@ -149,6 +150,9 @@ client.on("message", (msg) => {
             eball.run(msg,client,Discord,color,arg1);
         break;
     }
-}else {return;}
+  }else {return;}
+}catch(err){
+    console.log(err);
+}
    // console.log(`arg0 => ${arg0}\narg1 => ${arg1}\ncmd => ${cmd}\npf2 => ${pf2}\narg01 => ${arg01}\ncommands_and_prefix => ${commands_and_prefix}\nmentions => ${mentions}\nmg => ${mg}`);
 });
