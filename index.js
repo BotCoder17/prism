@@ -80,7 +80,7 @@ client.on("message", (msg) => {
       prm.run(msg,client,Discord,color,pf,arg0);
   }
 /*****************/
- if(pf2.toLowerCase()==pf.toLowerCase()){
+ else if(pf2.toLowerCase()==pf.toLowerCase()){
     let anime=require('./anime.js');
     anime.run(msg,Discord,client,color,cmd,arg01);
     switch(cmd){
@@ -149,6 +149,6 @@ client.on("message", (msg) => {
             eball.run(msg,client,Discord,color,arg1);
         break;
     }
-}
+}else {return;}
    // console.log(`arg0 => ${arg0}\narg1 => ${arg1}\ncmd => ${cmd}\npf2 => ${pf2}\narg01 => ${arg01}\ncommands_and_prefix => ${commands_and_prefix}\nmentions => ${mentions}\nmg => ${mg}`);
 });
