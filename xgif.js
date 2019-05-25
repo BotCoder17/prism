@@ -1,6 +1,7 @@
 exports.run = (msg,Discord,client,arg1,color) => {
     if(!client.channels.get(msg.channel.id).nsfw) return msg.channel.send(`U can view this only in NSFW enabled channels`);
      const Pornsearch = require('pornsearch');
+     if(arg1=='') return;
      const Searcher = new Pornsearch(arg1);
      Searcher.gifs()
        .then(gifs => {
