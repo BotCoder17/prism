@@ -18,9 +18,9 @@ exports.run = (msg,client,Discord,color,pf,ownerID) => {
        msg.channel.send(`Resetting... **${client.user.tag}**`)
          .then(client.destroy())
          .then(client.login(process.env.TOKEN))
-         .then((m) => {
+         .then((mes) => {
            client.on('ready', () => {
-              m.edit(`**${client.user.tag}** is online! **${h1}:${m} ${tp}** \`(IST)\``);
+              mes.edit(`**${client.user.tag}** is online! **${h1}:${m} ${tp}** \`(IST)\``);
            });
         });
      }
