@@ -19,7 +19,7 @@ exports.run = (msg,client,Discord,color,pf,ownerID) => {
        .then(client.destroy())
        .then(client.login(process.env.TOKEN));
         client.on('ready', () => {
-            msg.channel.send(`**${client.user.tag}** is online! **${h1}+':'+${m}+' '+${tp}** \`(IST)\``);
+            msg.channel.send(`**${client.user.tag}** is online! **${h1}:${m} ${tp}** \`(IST)\``);
         });
      }
 }
