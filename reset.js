@@ -9,17 +9,19 @@ exports.run = (msg,client,Discord,color,pf,ownerID) => {
           h+=1;
        }
        if(m<10) m='0'+m;
-   //    msg.channel.send(h+':'+m) // 24 hrs
+       // console.log(h+':'+m) // 24 hrs
        if(h>12){
           h1=h-12;
           tp='pm';
        }else tp='am';
-       // msg.channel.send(h1+':'+m+' '+tp) // 12 hrs
+       // console.log(h1+':'+m+' '+tp) // 12 hrs
        msg.channel.send(`Resetting... **${client.user.tag}**`)
-       .then(client.destroy())
-       .then(client.login(process.env.TOKEN));
-        client.on('ready', () => {
-            msg.channel.send(`**${client.user.tag}** is online! **${h1}:${m} ${tp}** \`(IST)\``);
+         .then(client.destroy())
+         .then(client.login(process.env.TOKEN))
+         .then((m) => {
+           client.on('ready', () => {
+              m.edit(`**${client.user.tag}** is online! **${h1}:${m} ${tp}** \`(IST)\``);
+           });
         });
      }
 }
