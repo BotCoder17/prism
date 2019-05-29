@@ -38,6 +38,6 @@ exports.run = (msg,client,Discord,color,arg01) => {
              }
              csd.addField('Joined Discord on',new Date(msg.author.createdTimestamp).toGMTString())
              .addField('Is a bot?',(msg.author.bot==true)?'Yes':'No');
-             msg.channel.send(csd);
+             msg.channel.send(csd)
     }
 }
