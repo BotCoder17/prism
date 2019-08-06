@@ -1,6 +1,7 @@
 exports.run = (msg,client,Discord,color,pf,ownerID) => {
     if(msg.author.id==ownerID){
-       var t=new Date(client. readyAt).toGMTString().split(' ');
+      // var t=new Date(client. readyAt).toGMTString().split(' ');
+        var t=new Date().toGMTString().split(' ');
        var s=t[4].split(':');
        var h=parseInt(s[0]),m=parseInt(s[1]),h1=0,tp='am';
        h+=5;m+=30;
