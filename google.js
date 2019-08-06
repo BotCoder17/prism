@@ -1,10 +1,10 @@
 exports.run = (msg,Discord,client,color,arg1) => {
    var google = require('google')
-     google.resultsPerPage = 10
+     google.resultsPerPage = 10;
      var titles = new Array();
      var desc = new Array();
      var links = new Array();
-     if(arg1=='') return;
+     if(arg1=='') return msg.channel.send(`What u wanna search?`);
      google(arg1, (err, res) => {
         if (err) console.log(err);
         var t=new Discord.RichEmbed()
@@ -20,9 +20,9 @@ exports.run = (msg,Discord,client,color,arg1) => {
           titles[i] = (x==''||x==null)?`Search for ${arg1}`:x;
           desc[i] = (y==''||y==null)?'Click here':y;
           links[i] = (z==''||z==null)?res.url:z;
-          for(var j=i ; j<=res.links.length ; j++){
-             t.addField(`${titles[j]}`,`[${desc[j]}](${links[j]})`)
-          }
+       //   for(var j=i ; j<=i ; j++){   //check for i loop
+          t.addField(`${titles[i]}`,`[${desc[i]}](${links[i]})`)
+         // }
         }
        msg.channel.send(t)
     });
