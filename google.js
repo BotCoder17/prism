@@ -7,6 +7,7 @@ exports.run = (msg,Discord,client,color,arg1) => {
      if(arg1=='') return msg.channel.send(`What u wanna search?`);
      google(arg1, (err, res) => {
         if (err) console.log(err);
+        console.log(res);
         var t=new Discord.RichEmbed()
         .setTitle(`Google serch for ${arg1}`)
         .setDescription(`Hey ${msg.author.username}! Click on any link below to find out the result, for more, [Click Here](${res.url})`)
