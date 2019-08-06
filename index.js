@@ -28,6 +28,7 @@ client.on('ready', () => {
    cm.run(client,Discord,pf);
 });
 client.on("message", (msg) => {
+  if (err) return;
   let color=msg.guild.members.get(client.users.get(msg.author.id).id).highestRole.hexColor;
   if(msg.channel.type!='text'||(msg.author.bot)) return;
   /**********/
