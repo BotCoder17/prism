@@ -20,9 +20,9 @@ exports.run = (msg,Discord,client,color,arg1) => {
           titles[i] = (x==''||x==null)?`Search for ${arg1}`:x;
           desc[i] = (y==''||y==null)?'Click here':y;
           links[i] = (z==''||z==null)?res.url:z;
-          for(var j=i;j<=i;j++){
+          for(var j=i ; j<=res.links.length ; j++){
              t.addField(`${titles[j]}`,`[${desc[j]}](${links[j]})`)
-         }
+          }
         }
        msg.channel.send(t)
     });
