@@ -17,7 +17,7 @@ setInterval(() => {
   }).on('error', (e) => {
     console.error(e);
   });
-}, 7000);
+}, 10000);
 
 client.login(process.env.TOKEN);
 
