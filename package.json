@@ -3,7 +3,7 @@
   "version": "1.7.5",
   "main": "index.js",
   "dependencies": {
-    "discord.js": "^11.5.0",
+    "discord.js": "^11.5.1",
     "urban": "^0.3.2",
     "word-definition": "2.1.6",
     "one-liner-joke": "1.2.0",
