@@ -61,7 +61,7 @@ client.on("message", (msg,err) => {
             arg0+=yui;  // user id (of bot)
          }
       }
-    }catch(err);    
+    }catch(err){};    
     try{
       for(var i=0;i<mentions.length;i++){
           let yui=mentions.charAt(i);
@@ -69,7 +69,7 @@ client.on("message", (msg,err) => {
              arg01+=yui;  // user id (of user)
           }
        }
-    }catch(err);
+    }catch(err){};
      for(var i=commands_and_prefix.length;i<mg.length;i++) arg1+=mg.charAt(i); 
      for(var i=0;i<ln;i++) pf2+=commands_and_prefix.charAt(i); // get prefix
      for(var i=ln;i<commands_and_prefix.length;i++) cmd+=commands_and_prefix.charAt(i); // get commands
