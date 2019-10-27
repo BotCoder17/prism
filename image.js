@@ -1,12 +1,8 @@
 exports.run = (msg,Discord,client,color,arg1) => {
     const gis = require('g-i-s');
     gis(arg1, (err, res) => {
-    if (err) {
-       console.log(err);
-     }
-     else {
        var ran = parseInt(Math.random()*res.length);
-       console.log(JSON.parse(JSON.stringify(res, null, '  ')));
+     //  console.log(JSON.parse(JSON.stringify(res, null, '  ')));
        let img=JSON.parse(JSON.stringify(res, null, '  '));
       /* let im=new Discord.RichEmbed()
         .setTitle(`Image search for ${arg1}`)
@@ -17,11 +13,8 @@ exports.run = (msg,Discord,client,color,arg1) => {
         msg.channel.send({embed : {
              image: {
                  url: img[ran].url
-             },
-             color: color,
-             title: `Image search for ${arg1}`,
-             timestamp: new Date()
+             }
         }});
-     }
-  });
+  }).then((sc) => console.log('image fetched'))
+    .catch(console.log);
 }
