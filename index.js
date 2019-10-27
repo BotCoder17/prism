@@ -123,10 +123,6 @@ client.on("message", (msg,err) => {
             let say=require('./say.js');
             say.run(msg,arg1);
         break;
-        case 'youtube':case 'ytsearch':case 'yt':
-            let yt=require('./yt.js');
-            yt.run(msg,client,Discord,color,arg1);
-        break;
         case 'ub': case 'urban':
             let urban=require('./urban.js');
             urban.run(msg,Discord,client,color,arg1);
