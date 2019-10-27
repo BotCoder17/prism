@@ -8,7 +8,8 @@ exports.run = (msg,Discord,client,color,arg1) => {
         msg.channel.send({embed : {
              image: {
                  url: img[ran].url
-             }
+             },
+            color: color
         }});
   })
 }
