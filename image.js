@@ -5,11 +5,11 @@ exports.run = (msg,Discord,client,color,arg1) => {
        var ran = parseInt(Math.floor(Math.random()*res.length));
      //  console.log(JSON.parse(JSON.stringify(res, null, '  ')));
        let img=JSON.parse(JSON.stringify(res, null, '  '));
+        console.log(arg1)
         msg.channel.send({embed : {
              image: {
                  url: img[ran].url
-             },
-            color: color
+             }
         }});
   })
 }
