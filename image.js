@@ -15,6 +15,6 @@ exports.run = (msg,Discord,client,color,arg1) => {
                  url: img[ran].url
              }
         }});
-  }).then((sc) => console.log('image fetched'))
+  }).then(() => console.log('image fetched'))
     .catch(console.log);
 }
