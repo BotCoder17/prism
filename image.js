@@ -18,13 +18,9 @@ exports.run = (msg,Discord,client,color,arg1) => {
              image: {
                  url: img[ran].url
              },
-             footer: {
-	       	   text: `Requested by ${msg.author.username}`,
-		       icon_url: msg.author.avatarURL,
-	         },
              color: color,
              title: `Image search for ${arg1}`,
-             timestamp: new Date(),
+             timestamp: new Date()
         }});
      }
   });
