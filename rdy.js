@@ -1,8 +1,8 @@
 exports.run = (client,Discord,pf) => {
   client.user.setPresence({
       game: {
-          name: `the sun`,
-          type: 'WATCHING'
+          name: `ping! pong!`,
+          type: 'PLAYING'
       },
       status: 'online'
   });
