@@ -11,7 +11,7 @@ exports.run = (msg,Discord,client,color,arg1) => {
         .setFooter(`Requested by ${msg.author.username}`,msg.author.avatarURL)
     
     for (var i = 0; i < res.length; i++) {
-        t.addField(`${res[i].title}`,`[View the result](${res[i].link})`)
+        t.addField(res[i].title,'[View the result]('+(res[i].link)+')')
     }
     msg.channel.send(t)
   }).catch(err => {
