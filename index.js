@@ -91,7 +91,7 @@ client.on("message", (msg,err) => {
             let ping=require('./ping.js');
             ping.run(Discord,client,msg);
         break;
-        case 'google':
+        case 'google':case 'ggl':
             let google=require('./google.js');
             google.run(msg,Discord,client,color,arg1);
         break;
