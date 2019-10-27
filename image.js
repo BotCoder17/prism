@@ -1,19 +1,13 @@
 exports.run = (msg,Discord,client,color,arg1) => {
-    var gis = require('g-i-s');
+    const gis = require('g-i-s');
     gis(arg1, (err, res) => {
      if (err) {
        console.log(err);
      }
      else {
-       var ran = parseInt(Math.random()*res.length);
+       let ran = parseInt(Math.random()*res.length);
        let img=JSON.parse(JSON.stringify(res, null, '  '));
-      /* let im=new Discord.RichEmbed()
-        .setTitle(`Image search for ${arg1}`)
-        .setImage(img[ran].url)
-        .setTimestamp(new Date())
-        .setFooter(`Requested by ${msg.author.username}`,msg.author.avatarURL)
-        .setColor(color) */
-       let im = {
+       /*let im = {
             color: color,
             title: `Image search for ${arg1}`,
             image: {
@@ -24,8 +18,20 @@ exports.run = (msg,Discord,client,color,arg1) => {
 		       text: `Requested by ${msg.author.username}`,
 		       icon_url: msg.author.avatarURL,
 	        }
-       };
-        msg.channel.send({embed: im})
+       };*/
+        msg.channel.send({embed: {
+            color: color,
+            title: `Image search for ${arg1}`,
+            image: {
+		      url: img[ran].url,
+         	},
+            timestamp: new Date(),
+            footer: {
+		       text: `Requested by ${msg.author.username}`,
+		       icon_url: msg.author.avatarURL,
+	        }
+            }
+			});
      }
   });  
 }
