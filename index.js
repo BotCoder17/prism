@@ -57,7 +57,7 @@ client.on("message", (msg,err) => {
     try{
       for(var i=0;i<commands_and_prefix.length;i++){
          let yui=commands_and_prefix.charAt(i);
-         if(yui!='<'&&yui!='@'&&yui!='>'&&yui!=' '){
+         if(yui!='<'&&yui!='@'&&yui!='>'&&yui!=' '&&(yui.charCodeAt(0)>=48&&yui.charCodeAt(0)<=57)){
             arg0+=yui;  // user id (of bot)
          }
       }
@@ -65,7 +65,7 @@ client.on("message", (msg,err) => {
     try{
       for(var i=0;i<mentions.length;i++){
           let yui=mentions.charAt(i);
-          if(yui!='<'&&yui!='@'&&yui!='>'&&yui!=' '){
+          if(yui!='<'&&yui!='@'&&yui!='>'&&yui!=' '&&(yui.charCodeAt(0)>=48&&yui.charCodeAt(0)<=57)){
              arg01+=yui;  // user id (of user)
           }
        }
