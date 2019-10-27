@@ -12,7 +12,7 @@ exports.run = (msg,Discord,client,color,arg1) => {
         .setImage(img[ran].url)
         .setTimestamp(new Date())
         .setFooter(`Requested by ${msg.author.username}`,msg.author.avatarURL)
-        .setColor(color);
+        .setColor(color)
         msg.channel.send(im)
      }
   });  
