@@ -8,13 +8,17 @@ exports.run = (msg,Discord,client,color,arg1) => {
        var ran = parseInt(Math.random()*res.length);
        console.log(JSON.parse(JSON.stringify(res, null, '  ')));
        let img=JSON.parse(JSON.stringify(res, null, '  '));
-       let im=new Discord.RichEmbed()
+      /* let im=new Discord.RichEmbed()
         .setTitle(`Image search for ${arg1}`)
         .setImage(img[ran].url)
         .setTimestamp(new Date())
         .setFooter(`Requested by ${msg.author.username}`,msg.author.avatarURL)
-        .setColor(color)
-        msg.channel.send(im)
+        .setColor(color)*/
+        msg.channel.send({embed : {
+             image: {
+                 url: img[ran].url
+             }
+        }});
      }
   });
 }
