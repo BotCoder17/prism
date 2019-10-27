@@ -23,7 +23,7 @@ client.login(process.env.TOKEN);
 
 var pf=process.env.PREFIX;
 client.on('ready', () => {
-   console.log(`${client.user.tag} is ready!`);
+   console.log(`${client.user.tag} is here for chocolates :p !`);
    let cm=require('./rdy.js');
    cm.run(client,Discord,pf);
 });
@@ -32,7 +32,7 @@ client.on("message", (msg,err) => {
   let color=msg.guild.members.get(client.users.get(msg.author.id).id).highestRole.hexColor;
   if(msg.channel.type!='text'||(msg.author.bot)) return;
   /**********/
-  let mg=msg.content,ln=pf.length;
+  let mg=msg.content, ln=pf.length;
   let als=mg.split(' ');
      let cl='';
      for(var i=0;i<als.length;i++){
@@ -40,6 +40,7 @@ client.on("message", (msg,err) => {
            cl+=als[i]+' ';
         }
      }
+    cl=cl.trim();
   /**
      pf2=check prefix
      cmd=get all commands
@@ -53,21 +54,22 @@ client.on("message", (msg,err) => {
   let mntns=''; // mentions
   
   let commands_and_prefix=nonne[0],mentions=nonne[1],pf2='',cmd='';
-    
-     for(var i=0;i<commands_and_prefix.length;i++){
-       let yui=commands_and_prefix.charAt(i);
-        if(yui!='<'&&yui!='@'&&yui!='>'&&yui!=' '){
-           arg0+=yui;  // user id (of bot)
-        }
-     }
-    
-    for(var i=0;i<mentions.length;i++){
-       let yui=mentions.charAt(i);
-        if(yui!='<'&&yui!='@'&&yui!='>'&&yui!=' '){
-           arg01+=yui;  // user id (of user)
-        }
-     }
-    
+    try{
+      for(var i=0;i<commands_and_prefix.length;i++){
+         let yui=commands_and_prefix.charAt(i);
+         if(yui!='<'&&yui!='@'&&yui!='>'&&yui!=' '){
+            arg0+=yui;  // user id (of bot)
+         }
+      }
+    }catch(err);    
+    try{
+      for(var i=0;i<mentions.length;i++){
+          let yui=mentions.charAt(i);
+          if(yui!='<'&&yui!='@'&&yui!='>'&&yui!=' '){
+             arg01+=yui;  // user id (of user)
+          }
+       }
+    }catch(err);
      for(var i=commands_and_prefix.length;i<mg.length;i++) arg1+=mg.charAt(i); 
      for(var i=0;i<ln;i++) pf2+=commands_and_prefix.charAt(i); // get prefix
      for(var i=ln;i<commands_and_prefix.length;i++) cmd+=commands_and_prefix.charAt(i); // get commands
