@@ -85,14 +85,6 @@ client.on("message", (msg,err) => {
     let anime=require('./anime.js');
     anime.run(msg,Discord,client,color,cmd,arg01);
     switch(cmd){
-        case 'xvid': case 'xvideo':
-            let xvid=require('./xvid.js');
-            xvid.run(msg,Discord,client,arg1,color);
-        break;
-        case 'xgif':
-            let xgif=require('./xgif.js');
-            xgif.run(msg,Discord,client,arg1,color);
-        break;
         case 'ping':
             let ping=require('./ping.js');
             ping.run(Discord,client,msg);
@@ -133,8 +125,8 @@ client.on("message", (msg,err) => {
             let urban=require('./urban.js');
             urban.run(msg,Discord,client,color,arg1);
         break;
-        case 'reboot':case 'reset':
-            let rb=require('./reset.js');
+        case 'res':case 'restart':
+            let rb=require('./restart.js');
             rb.run(msg,client,Discord,color,pf,ownerID);
         break;
         case 'ava':case 'avatar':
