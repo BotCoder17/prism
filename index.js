@@ -93,7 +93,7 @@ client.on("message", (msg,err) => {
         break;
         case 'img':case 'image':
             let img=require('./image.js');
-            img.run(msg,client,Discord,color,pf);
+            img.run(msg,client,Discord,color,arg1);
         break;
         case 'google':case 'ggl':
             let google=require('./google.js');
