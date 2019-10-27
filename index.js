@@ -79,7 +79,7 @@ client.on("message", (msg,err) => {
      arg1=arg1.trim(); // text (no mentions)
 /******************/
   if(pf2.toLowerCase()!=pf.toLowerCase()) {
-      let prm=require('./prism.js');  // bot info
+      let prm=require('./btinfo.js');  // bot info
       prm.run(msg,client,Discord,color,pf,arg0);
   }
 /*****************/
