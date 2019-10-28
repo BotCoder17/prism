@@ -104,6 +104,10 @@ client.on("message", (msg,err) => {
             let dict=require('./gendic.js');
             dict.run(msg,client,Discord,color,arg1,pf);
         break;
+        case 'wiki':case 'wikipedia':
+            let wik=require('./wiki.js');
+            wik.run(msg,client,Discord,color,arg1);
+        break;
         case 'ev': case 'eval':
             let eval=require('./eval.js');
             eval.run(msg,client,Discord,color,ownerID);
