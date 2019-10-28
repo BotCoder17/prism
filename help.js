@@ -21,6 +21,7 @@ exports.run = (msg,client,Discord,cmd,color,arg1) => {
       .addField('Fun',fn)
       .addField('Utility',utl)
       .setColor(color)
+      .setThumbnail(client.user.avatarURL)
       .setTimestamp(new Date())
       .setFooter(`Requested by ${msg.author.username}`,msg.author.avatarURL)
       
