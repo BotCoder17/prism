@@ -3,21 +3,18 @@ const client = new Discord.Client({
     disableEveryone : true
 });
 let ownerID=process.env.OWNERID;
-let express = require('express');
-let https = require('https');
-let ex = express();
 
-ex.get('/', (req, res) => {
-  res.sendStatus(200);
+const http = require('http');
+const express = require('express');
+const app = express();
+app.get("/", (request, response) => {
+  //console.log(Date.now() + " Ping Received");
+  response.sendStatus(200);
 });
-ex.listen(process.env.PORT);
+app.listen(process.env.PORT);
 setInterval(() => {
-  https.get(process.env.SECRET, (res) => {
-   // :)
-  }).on('error', (e) => {
-    console.error(e);
-  });
-}, 10000);
+  http.get(`http://${process.env.PROJECT_DOMAIN}.glitch.me/`);
+}, 280000);
 
 client.login(process.env.TOKEN);
 
