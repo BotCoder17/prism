@@ -3,10 +3,10 @@ exports.run = (msg,client,Discord,color) => {
  
    weeb.nekoLife('fact').then(res => {
        var data = JSON.parse(res).fact;
-       msg.channel.send({embed: { 
-             title: 'Everyday Fact',
-             description: data,
-             color: color
-       }});
+       var fc=new Discord.RichEmbed()
+             .setTitle('Everyday Facts')
+             .setDescription(data)
+             .setColor(color)
+       msg.channel.send(fc)
    });
 }
