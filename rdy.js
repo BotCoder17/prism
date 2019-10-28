@@ -2,7 +2,7 @@ exports.run = (client,Discord,pf) => {
   client.user.setPresence({
       game: {
           name: `Ping! Pong! Mention me 🌟`,
-          type: 'PLAYING'
+          type: 'STREAMING'
       },
       status: 'online'
   });
