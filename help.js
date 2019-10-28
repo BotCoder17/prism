@@ -1,6 +1,6 @@
 exports.run = (msg,client,Discord,cmd,color,arg1) => {
       let help=require('./help.json');
-      let ani="",utl="",sr="",trn=help.translate[0],fn="";
+      let ani="",utl="",sr="",trn=`\`${help.translate[0]}\``,fn="";
       for(var i=0;i<help.anime.length;i++){
              ani+=(i<(help.anime.length-1))?`\`${help.anime[i]}\`,`:`\`${help.anime[i]}\``;
       }
