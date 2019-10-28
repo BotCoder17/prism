@@ -3,7 +3,7 @@ exports.run = (msg,client,Discord,color) => {
      .setTitle('Server Info')
      .addField('Name',msg.guild.name)
      .addField('ID',msg.guild.id)
-     .addField('Owner',<@${msg.guild.ownerID}>)
+     .addField('Owner',`<@${msg.guild.ownerID}>`)
      .addField('Created At',new Date(msg.guild.createdTimestamp).toGMTString())
      .addField('Region',msg.guild.region)
      .addField('Member Count',msg.guild.memberCount)
