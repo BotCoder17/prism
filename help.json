@@ -1,7 +1,7 @@
 {
-    anime: ['tickle','slap','poke','pat','kiss','hug','feed','cuddle','neko','smug','baka'],
-    utility: ['avatar','bot info','ping','userinfo','say','emoji'],
-    search: ['google','wikipedia','general dictionary','urban dictionary','weather','image'],
-    translate: ['language translate'],
-    fun: ['8ball']
+    "anime": ["tickle","slap","poke","pat","kiss","hug","feed","cuddle","neko","smug","baka"],
+    "utility": ["avatar","bot info","ping","userinfo","say","emoji"],
+    "search": ["google","wikipedia","general dictionary","urban dictionary","weather","image"],
+    "translate": ["language translate"],
+    "fun": ["8ball"]
 }
