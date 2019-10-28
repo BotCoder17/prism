@@ -88,10 +88,6 @@ client.on("message", (msg,err) => {
             let ping=require('./ping.js');
             ping.run(Discord,client,msg);
         break;
-        case 'dict': case 'dictionary':
-            let dict=require('./gendict.js');
-            dict.run(msg,client,Discord,color,pf);
-        break;
         case 'img':case 'image':
             let img=require('./image.js');
             img.run(msg,client,Discord,color,arg1);
@@ -105,7 +101,7 @@ client.on("message", (msg,err) => {
             trn.run(msg,Discord,client,color,arg1);
         break;
         case 'dict': case 'dictionary':
-            let dict=require('./dict.js');
+            let dict=require('./gendic.js');
             dict.run(msg,client,Discord,color,arg1,pf);
         break;
         case 'ev': case 'eval':
