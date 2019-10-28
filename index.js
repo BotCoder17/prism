@@ -98,7 +98,7 @@ client.on("message", (msg,err) => {
         break;
         case 'fact':
             let fct=require('./fct.js');
-            fct.run();
+            fct.run(msg,client,Discord,color);
         break;
         case 'trn': case 'translate':
             let trn=require('./trn.js');
