@@ -88,6 +88,10 @@ client.on("message", (msg,err) => {
             let ping=require('./ping.js');
             ping.run(Discord,client,msg);
         break;
+        case 'help':
+            let help=require('./help.js');
+            help.run(msg,client,Discord,cmd,color,arg1);
+        break;
         case 'img':case 'image':
             let img=require('./image.js');
             img.run(msg,client,Discord,color,arg1);
