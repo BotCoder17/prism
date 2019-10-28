@@ -11,7 +11,7 @@ exports.run = (msg,client,Discord,color,arg01) => {
              .addField('Tag',u.tag)
              .addField('Status',u.presence.status);
              try{
-               csd.addField(`Joined ${msg.guild.name} on`,new Date(msg.guild.members.get(cool).joinedTimestamp).toGMTString());
+               csd.addField(`Joined ${msg.guild.name} on`,new Date(msg.guild.members.get(arg01).joinedTimestamp).toGMTString());
              }catch(err){
                console.log(err);
              }
@@ -20,7 +20,7 @@ exports.run = (msg,client,Discord,color,arg01) => {
              msg.channel.send(csd);
          })
           .catch(err => {
-             msg.channel.send('That user has left Discord');
+             msg.channel.send(`Can't find the user`);
          });
     }else{
       let csd=new Discord.RichEmbed()
