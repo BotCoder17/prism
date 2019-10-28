@@ -132,7 +132,7 @@ client.on("message", (msg,err) => {
             let ava=require('./ava.js');
             ava.run(msg,client,Discord,color,arg01);
         break;
-        case 'whois': case 'userinfo':
+        case 'whois':case 'userinfo':
             let whois=require('./userinfo.js');
             whois.run(msg,client,Discord,color,arg01);
         break;
