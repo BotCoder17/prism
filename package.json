@@ -5,9 +5,9 @@
   "dependencies": {
     "discord.js": "^11.5.1",
     "urban": "^0.3.2",
-    "word-definition": "2.1.6",
-    "one-liner-joke": "1.2.0",
-    "chat-joke": "1.0.4",
+    "word-definition": "^2.1.6",
+    "one-liner-joke": "^1.2.0",
+    "chat-joke": "^1.0.4",
     "node-google-translate-skidz": "^1.1.2",
     "express": "^4.16.4",
     "howler": "^2.1.2",
