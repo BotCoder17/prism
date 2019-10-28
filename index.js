@@ -136,6 +136,10 @@ client.on("message", (msg,err) => {
             let whois=require('./userinfo.js');
             whois.run(msg,client,Discord,color,arg01);
         break;
+        case 'serverinfo':case 'whatis':
+            let serv=require('./serverinfo.js');
+            serv.run(msg,client,Discord,color);
+        break;
         case '8ball':case '8b':
             let eball=require('./eball.js');
             eball.run(msg,client,Discord,color,arg1);
