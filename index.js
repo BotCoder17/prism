@@ -96,6 +96,10 @@ client.on("message", (msg,err) => {
             let google=require('./google.js');
             google.run(msg,Discord,client,color,arg1);
         break;
+        case 'fact':
+            let fct=require('./fct.js');
+            fct.run();
+        break;
         case 'trn': case 'translate':
             let trn=require('./trn.js');
             trn.run(msg,Discord,client,color,arg1);
