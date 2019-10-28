@@ -3,5 +3,5 @@
     "utility": ["avatar","bot info","ping","userinfo","say","emoji"],
     "search": ["google","wikipedia","general dictionary","urban dictionary","weather","image"],
     "translate": ["language translate"],
-    "fun": ["8ball"]
+    "fun": ["8ball","fact"]
 }
