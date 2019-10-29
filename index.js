@@ -20,7 +20,7 @@ client.login(process.env.TOKEN);
 
 var pf=process.env.PREFIX;
 client.on('ready', () => {
-   console.log(`${client.user.tag} is here for chocolates😋🍫!`);
+   console.log(`${client.user.tag} is ready for chocolates😋🍫!`);
    let cm=require('./rdy.js');
    cm.run(client,Discord,pf);
 });
