@@ -1,7 +1,7 @@
 {
     "anime": ["tickle","slap","poke","pat","kiss","hug","feed","cuddle","neko","smug","baka"],
-    "utility": ["avatar || ava","ping","userinfo || whois","serverinfo || whatis","say","emoji"],
-    "search": ["google || ggl","wikipedia || wiki","dict || dictionary","urban || ub","weather","image || img"],
-    "translate": ["trn || translate"],
-    "fun": ["8ball || 8b","fact"]
+    "utility": ["avatar (OR) ava","ping","userinfo (OR) whois","serverinfo (OR) whatis","say","emoji"],
+    "search": ["google (OR) ggl","wikipedia (OR) wiki","dict (OR) dictionary","urban (OR) ub","weather","image (OR) img"],
+    "translate": ["trn (OR) translate"],
+    "fun": ["8ball (OR) 8b","fact"]
 }
