@@ -88,6 +88,10 @@ client.on("message", (msg,err) => {
             let ping=require('./ping.js');
             ping.run(Discord,client,msg);
         break;
+        case 'stat':case 'stats':case 'statistic':case 'statistics':
+            let stat=require('./statistics.js');
+            stat.run(msg,client,Discord,color,ownerID);
+        break;
         case 'help':
             let help=require('./help.js');
             help.run(msg,client,Discord,cmd,color,arg1);
