@@ -21,8 +21,8 @@ exports.run = (msg,client,Discord,color,ownerID) => {
       //cpu usage
       let user2=(process.cpuUsage().user/6e+7),
           system2=(process.cpuUsage().system/6e+7);  //all in Mins
-      let user=(parseInt(user2)>60)?user2/60 + ' hrs':(parseInt(user2)==0)?user2*60 + ' secs':(parseInt(user2*60)==0)?user2*60000 + ' ms':user2+' mins';
-      let system=(parseInt(system2)>60)?system2/60 + ' hrs':(parseInt(system2)==0)?system2*60 + ' secs':(parseInt(system2*60)==0)?system2*60000 + ' ms':system2+' mins';
+      let user=(parseInt(user2)>60)?user2/60 + ' hrs':(parseInt(user2)==0 && parseInt(user2*60)!=0)?user2*60 + ' secs':(parseInt(user2*60)==0)?user2*60000 + ' ms':user2+' mins';
+      let system=(parseInt(system2)>60)?system2/60 + ' hrs':(parseInt(system2)==0 && parseInt(system2*60)!=0)?system2*60 + ' secs':(parseInt(system2*60)==0)?system2*60000 + ' ms':system2+' mins';
       //uptime
       let uptime2=(Math.floor(process.uptime())/60); // mins
       let uptime=(parseInt(uptime2)>59)?uptime2/60 + ' hrs':(parseInt(uptime2)<1)?uptime2*60 + ' secs':(parseInt(uptime2/60)>23)?uptime2/1440 + ' days':uptime2 + ' mins';
