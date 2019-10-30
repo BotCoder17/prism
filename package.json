@@ -26,8 +26,7 @@
     "node-opus": "^0.3.2",
     "opusscript": "^0.0.7",
     "request": "^2.88.0",
-    "util": "^0.12.1",
-    "uws": "^99.0.0"
+    "util": "^0.12.1"
   },
   "engines": {
     "node": "8.x"
