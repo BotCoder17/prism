@@ -7,7 +7,7 @@ exports.run = (msg,client,Discord,color,ownerID) => {
       for(var i in vs)
           res.push([i, vs[i]]);
       for(var i=0;i<res.length;i++)
-          ver+=`${res[i][jl]} : v${res[i][jl+1]}\n`;
+          ver+=`**${res[i][jl]}** : \`v${res[i][jl+1]}\`\n`;
       //memory usage
       let rss=(process.memoryUsage().rss/1e+6),heapTotal=(process.memoryUsage().heapTotal/1e+6),    //all in MB
           heapUsed=(process.memoryUsage().heapUsed/1e+6),external=(process.memoryUsage().external/1e+6);
@@ -17,7 +17,7 @@ exports.run = (msg,client,Discord,color,ownerID) => {
       let uptime=(Math.floor(process.uptime())/60); // mins
       let st=new Discord.RichEmbed()
              .setTitle('Statistics 📊')
-             .addField('Version',`\`${ver}\``)
+             .addField('Version',`${ver}`)
              .addField('Memory usage',`**Resident Set Size** : \`${rss} MB\`\n**Total memory remaining** : \`${heapTotal} MB\`\n**Total memory used** : \`${heapUsed} MB\`\n**Memory usage of C++ objects** : \`${external} MB\``)
              .addField('CPU Usage',`**User** : \`${user} mins\`\n**System** : \`${system} mins\``)
              .addField('Uptime',`\`${uptime} mins\``)
