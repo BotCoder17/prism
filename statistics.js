@@ -13,7 +13,7 @@ exports.run = (msg,client,Discord,color,ownerID) => {
          ver+=process.versions[i]+"\n";
       let st=new Discord.RichEmbed()
              .setTitle('Statistic 📊')
-             .addField('Versions',ver)
+             .addField('Versions',process.versions)
              .addField('Memory usage',`**Resident Set Size** : \`${rss} MB\`\n**Total memory remaining** : \`${heapTotal} MB\`\n**Total memory used** : \`${heapUsed} MB\`\n**Memory usage of C++ objects** : \`${external} MB\``)
              .addField('CPU Usage',`**User** : \`${user} mins\`\n**System** : \`${system} mins\``)
              .addField('Uptime',`${uptime} mins`)
