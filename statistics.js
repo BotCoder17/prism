@@ -1,13 +1,18 @@
 exports.run = (msg,client,Discord,color,ownerID) => {
    if(ownerID==msg.author.id){
       // versions
-      let f=parseInt(0),s=parseInt(1),ver="";
+      let ver="";
       var vs = process.versions
       var res = [];
       for(var i in vs)
           res.push([i, vs[i]]);
-      for(var i=0;i<res.length;i++)
-          ver+=`${res[f]} : v${res[s]}\n`;
+      for(var k=0;k<res.length;k++){
+         for(var i=0;i<2;i++){
+            for(var j=0;j<2;j++){
+                ver+=`${res[i]} : v${res[j]}\n`;
+            }
+         }
+      }
       //memory usage
       let rss=(process.memoryUsage().rss/1e+6),heapTotal=(process.memoryUsage().heapTotal/1e+6),    //all in MB
           heapUsed=(process.memoryUsage().heapUsed/1e+6),external=(process.memoryUsage().external/1e+6);
