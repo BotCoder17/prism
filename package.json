@@ -29,7 +29,7 @@
     "util": "^0.12.1"
   },
   "engines": {
-    "node": "8.x"
+    "node": "v13.0.1"
   },
   "devDependencies": {
     "discord.js-docgen":"discordjs/docgen",
