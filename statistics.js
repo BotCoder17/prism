@@ -12,7 +12,7 @@ exports.run = (msg,client,Discord,color,ownerID) => {
              .addField('Node version',process.version)
              .addField('Memory usage',`**Resident Set Size** : \`${rss} MB\`\n**Total memory remaining** : \`${heapTotal} MB\`\n**Total memory used** : \`${heapUsed} MB\`\n**Memory usage of C++ objects** : \`${external} MB\``)
              .addField('CPU Usage',`**User** : \`${user} mins\`\n**System** : \`${system} mins\``)
-             .addField('Uptime',`${uptime} mins`)
+             .addField('Uptime',`\`${uptime} mins\``)
              .setThumbnail(client.user.avatarURL)
              .setTimestamp(new Date())
              .setColor(color)
