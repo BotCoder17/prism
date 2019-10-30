@@ -46,7 +46,7 @@
     "bufferutil": "^4.0.1",
     "zlib-sync":"^0.1.5",
     "zucc":"^0.2.0-b"
-  }
+  },
   "scripts": {
     "start": "node index.js"
   },
