@@ -31,7 +31,7 @@ exports.run = (msg,client,Discord,color,ownerID) => {
              .addField('Uptime',`\`${uptime}\``)
              .addField('Memory usage',`**Resident Set Size** : \`${rss}\`\n**Total memory remaining** : \`${heapTotal}\`\n**Total memory used** : \`${heapUsed}\`\n**Memory usage of C++ objects** : \`${external}\``)
              .addField('CPU Usage',`**User** : \`${user}\`\n**System** : \`${system}\``)
-             .addField('Version',`${ver}`)
+             .addField('Versions',`${ver}`)
              .setThumbnail(client.user.avatarURL)
              .setTimestamp(new Date())
              .setFooter(`${client.user.username}'s performance`,client.user.avatarURL)
