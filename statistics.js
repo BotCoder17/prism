@@ -34,6 +34,7 @@ exports.run = (msg,client,Discord,color,ownerID) => {
              .addField('Uptime',`\`${uptime}\``)
              .setThumbnail(client.user.avatarURL)
              .setTimestamp(new Date())
+             .setFooter(`${client.user.username}'s performance`,client.user.avatarURL)
              .setColor(color)
        msg.channel.send(st)
    }
