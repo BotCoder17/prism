@@ -28,10 +28,10 @@ exports.run = (msg,client,Discord,color,ownerID) => {
       let uptime=(parseInt(uptime2)>59)?uptime2/60 + ' hrs':(parseInt(uptime2)<1)?uptime2*60 + ' secs':(parseInt(uptime2/60)>23)?uptime2/1440 + ' days':uptime2 + ' mins';
       let st=new Discord.RichEmbed()
              .setTitle('Statistics 📊')
-             .addField('Version',`${ver}`)
+             .addField('Uptime',`\`${uptime}\``)
              .addField('Memory usage',`**Resident Set Size** : \`${rss}\`\n**Total memory remaining** : \`${heapTotal}\`\n**Total memory used** : \`${heapUsed}\`\n**Memory usage of C++ objects** : \`${external}\``)
              .addField('CPU Usage',`**User** : \`${user}\`\n**System** : \`${system}\``)
-             .addField('Uptime',`\`${uptime}\``)
+             .addField('Version',`${ver}`)
              .setThumbnail(client.user.avatarURL)
              .setTimestamp(new Date())
              .setFooter(`${client.user.username}'s performance`,client.user.avatarURL)
