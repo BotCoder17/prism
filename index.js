@@ -76,5 +76,5 @@ client.on("message", (msg,err) => {
      arg1=arg1.trim(); // text (no mentions)
 /******************/
    let indx_cmd=require('./index_commands.js');
-   indx_cmd.run(msg,client,Discord,pf,color,arg0,arg01,arg1,cmd,pf2);
+   indx_cmd.run(msg,client,Discord,pf,color,arg0,arg01,arg1,cmd,pf2,ownerID);
 });
