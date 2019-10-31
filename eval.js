@@ -16,8 +16,8 @@ exports.run = (msg,client,Discord,color,ownerID) => {
           let eevv=new Discord.RichEmbed()
               .setColor(color)
               rest = require("util").inspect(mvm);
-              eevv.addField('Output',`\`\`\`xl\n${clean(rest)}\`\`\``);
-           eevv.addField('Type of code',`\`\`\`xl\n${typeof mvm}\`\`\``);
+              eevv.addField('Output',`\`\`\`xl\n${clean(rest)}\`\`\``)
+                  .addField('Type',`\`\`\`xl\n${typeof mvm}\`\`\``);
            msg.channel.send(eevv);
         }
     } catch (err) {
