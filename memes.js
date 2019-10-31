@@ -53,7 +53,7 @@ exports.run = (msg,client,Discord,cmd,color,arg1) => {
              msg.channel.send(mem)
            });
        break;
-        case 'gifs':case 'gif':case 'gifmemes':case 'gifmeme':
+        case 'gifmemes':case 'gifmeme':case 'gmeme':case 'gmemes':
           memeSearch(arg1,{
               'subreddit': 'gifs', // dankmemes (default), memes, etc
               'sort': srt[srtr] // optional: top, new, relevance (default)
