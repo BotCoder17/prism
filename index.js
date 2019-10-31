@@ -2,8 +2,6 @@ const Discord = require("discord.js");
 const client = new Discord.Client({
     disableEveryone : true
 });
-let ownerID=process.env.OWNERID;
-
 const http = require('http');
 const express = require('express');
 const app = express();
@@ -17,8 +15,9 @@ setInterval(() => {
 }, 280000);
 
 client.login(process.env.TOKEN);
-
+var ownerID=process.env.OWNERID;
 var pf=process.env.PREFIX;
+var gif_api=process.env.GIF_API;
 client.on('ready', () => {
    console.log(`${client.user.tag} is ready for chocolates😋🍫!`);
    let cm=require('./rdy.js');
@@ -76,5 +75,5 @@ client.on("message", (msg,err) => {
      arg1=arg1.trim(); // text (no mentions)
 /******************/
    let indx_cmd=require('./index_commands.js');
-   indx_cmd.run(msg,client,Discord,pf,color,arg0,arg01,arg1,cmd,pf2,ownerID);
+   indx_cmd.run(msg,client,Discord,pf,color,arg0,arg01,arg1,cmd,pf2,ownerID,gif_api);
 });
