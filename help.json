@@ -1,7 +1,7 @@
 {
     "anime": ["tickle","slap","poke","pat","kiss","hug","feed","cuddle","neko","smug","baka"],
     "utility": ["avatar (OR) ava","ping","userinfo (OR) whois","serverinfo (OR) whatis","say","emoji"],
-    "search": ["google (OR) ggl","wikipedia (OR) wiki","dict (OR) dictionary","urban (OR) ub","weather","image (OR) img"],
+    "search": ["google (OR) ggl","wikipedia (OR) wiki","dict (OR) dictionary","urban (OR) ub","weather","image (OR) img","sgif (OR) gifsearch"],
     "general": ["trn (OR) translate","horoscope (or) hrc"],
     "fun": ["8ball (OR) 8b","fact"],
     "memes":["dankmemes","memes","funnymemes","gifmemes"]
