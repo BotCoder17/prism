@@ -36,7 +36,7 @@ exports.run = (msg,client,Discord,cmd,color,arg1) => {
              msg.channel.send(mem)
            });
        break;
-       case 'funny':
+       case 'funny':case 'funnymemes':case 'funnymeme':
           memeSearch(arg1,{
               'subreddit': 'funny', // dankmemes (default), memes, etc
               'sort': srt[srtr] // optional: top, new, relevance (default)
@@ -53,7 +53,7 @@ exports.run = (msg,client,Discord,cmd,color,arg1) => {
              msg.channel.send(mem)
            });
        break;
-       case 'gifs':case 'gif':
+        case 'gifs':case 'gif':case 'gifmemes':case 'gifmeme':
           memeSearch(arg1,{
               'subreddit': 'gifs', // dankmemes (default), memes, etc
               'sort': srt[srtr] // optional: top, new, relevance (default)
