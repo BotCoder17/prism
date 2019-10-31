@@ -1,4 +1,4 @@
-exports.run = (msg,client,Discord,pf,color,arg0,arg01,arg1,cmd,pf2,ownerID) => {
+exports.run = (msg,client,Discord,pf,color,arg0,arg01,arg1,cmd,pf2,ownerID,gif_api) => {
   if(pf2.toLowerCase()!=pf.toLowerCase()) {
       let prm=require('./btinfo.js');  // bot info
       prm.run(msg,client,Discord,color,pf,arg0);
@@ -17,6 +17,10 @@ exports.run = (msg,client,Discord,pf,color,arg0,arg01,arg1,cmd,pf2,ownerID) => {
         case 'stat':case 'stats':case 'statistic':case 'statistics':
             let stat=require('./statistics.js');
             stat.run(msg,client,Discord,color,ownerID);
+        break;
+        case 'searchgif':case 'sgif':
+           let giff=require('./sgif.js');
+           giff.run(msg,client,Discord,arg1,gif_api);
         break;
         case 'help':
             let help=require('./help.js');
