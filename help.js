@@ -20,7 +20,7 @@ exports.run = (msg,client,Discord,cmd,color,arg1) => {
       .setTitle('Help Box')
       .addField('Anime',ani)
       .addField('Language Translate',trn)
-      .addField('Search stuffs',sr)
+      .addField('Search stuffs',sr,true)
       .addField('Fun',fn)
       .addField('Memes',mem)
       .addField('Utility',utl)
