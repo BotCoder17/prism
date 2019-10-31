@@ -1,6 +1,6 @@
 exports.run = (msg,client,Discord,cmd,color,arg1) => {
       let help=require('./help.json');
-      let ani="",utl="",sr="",trn=`\`${help.translate[0]}\``,fn="";
+      let ani="",utl="",sr="",trn=`\`${help.translate[0]}\``,fn="",mem="";
       for(var i=0;i<help.anime.length;i++){
              ani+=(i<(help.anime.length-1))?`\`${help.anime[i]}\` ; `:`\`${help.anime[i]}\``;
       }
@@ -13,12 +13,16 @@ exports.run = (msg,client,Discord,cmd,color,arg1) => {
       for(var i=0;i<help.fun.length;i++){
              fn+=(i<(help.fun.length-1))?`\`${help.fun[i]}\` ; `:`\`${help.fun[i]}\``;
       }
+      for(var i=0;i<help.memes.length;i++){
+             mem+=(i<(help.memes.length-1))?`\`${help.memes[i]}\` ; `:`\`${help.memes[i]}\``;
+      }
       let em=new Discord.RichEmbed()
       .setTitle('Help Box')
       .addField('Anime',ani)
       .addField('Language Translate',trn)
       .addField('Search stuffs',sr)
       .addField('Fun',fn)
+      .addField('Memes',mem)
       .addField('Utility',utl)
       .setColor(color)
       .setThumbnail(client.user.avatarURL)
