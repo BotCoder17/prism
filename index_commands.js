@@ -18,7 +18,7 @@ exports.run = (msg,client,Discord,pf,color,arg0,arg01,arg1,cmd,pf2,ownerID,gif_a
             let stat=require('./statistics.js');
             stat.run(msg,client,Discord,color,ownerID);
         break;
-        case 'searchgif':case 'sgif':
+        case 'searchgif':case 'sgif':case 'gifsearch':
            let giff=require('./sgif.js');
            giff.run(msg,client,Discord,color,arg1,gif_api);
         break;
