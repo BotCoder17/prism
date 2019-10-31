@@ -1,4 +1,4 @@
-exports.run = (msg,client,Discord,pf,color,arg0,arg01,arg1,cmd,pf2) => {
+exports.run = (msg,client,Discord,pf,color,arg0,arg01,arg1,cmd,pf2,ownerID) => {
   if(pf2.toLowerCase()!=pf.toLowerCase()) {
       let prm=require('./btinfo.js');  // bot info
       prm.run(msg,client,Discord,color,pf,arg0);
