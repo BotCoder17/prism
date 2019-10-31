@@ -26,6 +26,10 @@ exports.run = (msg,client,Discord,pf,color,arg0,arg01,arg1,cmd,pf2,ownerID) => {
             let img=require('./image.js');
             img.run(msg,client,Discord,color,arg1);
         break;
+        case 'horoscope':case 'horc':case 'hrc':
+            let hrc=require('./horosc.js');
+            hrc.run(msg,client,Discord,color,arg1);
+        break;
         case 'google':case 'ggl':
             let google=require('./google.js');
             google.run(msg,Discord,client,color,arg1);
