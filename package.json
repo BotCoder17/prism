@@ -6,6 +6,7 @@
     "discord.js": "^11.5.1",
     "urban": "^0.3.2",
     "meme-search": "^1.0.5",
+    "aztro-js": "^0.1.5",
     "intl-wikipedia": "^5.0.0",
     "word-definition": "^2.1.6",
     "weather-js": "^2.0.0",
