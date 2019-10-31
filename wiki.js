@@ -16,5 +16,8 @@ intlpedia.search(searchTerm)
         .setTimestamp(new Date())
         .setFooter(`Requested by ${msg.author.username}`,msg.author.avatarURL)
         msg.channel.send(wik)
-  }).catch(err => console.error(err))
+  }).catch(err => { 
+       console.error(err)
+       msg.channel.send(`Couldn't find result for Wikipedia search, **${arg1}**`)
+  });
 }
