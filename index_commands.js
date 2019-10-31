@@ -20,7 +20,7 @@ exports.run = (msg,client,Discord,pf,color,arg0,arg01,arg1,cmd,pf2,ownerID,gif_a
         break;
         case 'searchgif':case 'sgif':
            let giff=require('./sgif.js');
-           giff.run(msg,client,Discord,arg1,gif_api);
+           giff.run(msg,client,Discord,color,arg1,gif_api);
         break;
         case 'help':
             let help=require('./help.js');
