@@ -7,6 +7,8 @@ exports.run = (msg,client,Discord,pf,color,arg0,arg01,arg1,cmd,pf2,ownerID) => {
  else if(pf2.toLowerCase()==pf.toLowerCase()){
     let anime=require('./anime.js');
     anime.run(msg,Discord,client,color,cmd,arg01);
+    let memes=require('./memes.js');
+    memes.run(msg,client,Discord,cmd,color,arg1);
     switch(cmd){
         case 'ping':
             let ping=require('./ping.js');
