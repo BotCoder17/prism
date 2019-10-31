@@ -7,7 +7,7 @@ exports.run = (msg,client,Discord,color,arg1) => {
              let cd=r.yesterday.current_date;
              let cd2=r.today.current_date;
              let cd3=r.tomorrow.current_date;
-          
+             if(r.today.description=="undefined"||r.tomorrow.description=="undefined"||r.yesterday.description=="undefined") return;
              let hor=new Discord.RichEmbed()
                    .setTitle(`Horoscope of ${arg1}`)
                    .setColor(color)
