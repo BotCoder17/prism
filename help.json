@@ -3,5 +3,5 @@
     "utility": ["avatar (OR) ava","ping","userinfo (OR) whois","serverinfo (OR) whatis","say","emoji"],
     "search": ["google (OR) ggl","wikipedia (OR) wiki","dict (OR) dictionary","urban (OR) ub","weather","image (OR) img"],
     "translate": ["trn (OR) translate"],
-    "fun": ["8ball (OR) 8b","fact"]
+    "fun": ["8ball (OR) 8b","fact","dankmemes","memes","funnymemes","gifmemes"]
 }
