@@ -1,6 +1,6 @@
 exports.run = (msg,client,Discord,cmd,color,arg1) => {
       let help=require('./help.json');
-      let ani="",utl="",sr="",trn=`\`${help.translate[0]}\``,fn="",mem="";
+      let ani="",utl="",sr="",trn="",fn="",mem="";
       for(var i=0;i<help.anime.length;i++){
              ani+=(i<(help.anime.length-1))?`\`${help.anime[i]}\` ; `:`\`${help.anime[i]}\``;
       }
@@ -10,6 +10,9 @@ exports.run = (msg,client,Discord,cmd,color,arg1) => {
       for(var i=0;i<help.search.length;i++){
              sr+=(i<(help.search.length-1))?`\`${help.search[i]}\` ; `:`\`${help.search[i]}\``;
       }
+      for(var i=0;i<help.general.length;i++){
+             trn+=(i<(help.general.length-1))?`\`${help.general[i]}\` ; `:`\`${help.general[i]}\``;
+      }
       for(var i=0;i<help.fun.length;i++){
              fn+=(i<(help.fun.length-1))?`\`${help.fun[i]}\` ; `:`\`${help.fun[i]}\``;
       }
@@ -18,8 +21,8 @@ exports.run = (msg,client,Discord,cmd,color,arg1) => {
       }
       let em=new Discord.RichEmbed()
       .setTitle('Help Box')
+      .addField('General',trn)
       .addField('Anime',ani)
-      .addField('Language Translate',trn)
       .addField('Search stuffs',sr)
       .addField('Fun',fn,true)
       .addField('Memes',mem,true)
