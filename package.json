@@ -5,6 +5,7 @@
   "dependencies": {
     "discord.js": "^11.5.1",
     "urban": "^0.3.2",
+    "yt-search": "^0.4.1",
     "dadjokes-wrapper": "^0.1.4",
     "meme-search": "^1.0.5",
     "aztro-js": "^0.1.5",
