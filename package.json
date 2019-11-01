@@ -8,6 +8,7 @@
     "yt-search": "^0.4.1",
     "dadjokes-wrapper": "^0.1.4",
     "meme-search": "^1.0.5",
+    "xkcd": "^1.1.3",
     "aztro-js": "^0.1.5",
     "giphy-api": "^2.0.1",
     "intl-wikipedia": "^5.0.0",
