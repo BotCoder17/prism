@@ -10,5 +10,7 @@ exports.run = (msg,client,Discord,color) => {
          .setColor(color)
          .setTimestamp(new Date())
          .setFooter(`Joke for ${msg.author.username}`,msg.author.avatarURL)
+         
+         msg.channel.send(jk)
      }).catch(err => console.error(err));
 }
