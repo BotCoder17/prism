@@ -22,6 +22,10 @@ exports.run = (msg,client,Discord,pf,color,arg0,arg01,arg1,cmd,pf2,ownerID,gif_a
            let giff=require('./sgif.js');
            giff.run(msg,client,Discord,color,arg1,gif_api);
         break;
+        case 'joke':case 'jokes':
+           let jks=require('./dadjokes.js');
+           jks.run(msg,client,Discord,color);
+        break;
         case 'help':
             let help=require('./help.js');
             help.run(msg,client,Discord,cmd,color,arg1);
