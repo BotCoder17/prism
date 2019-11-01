@@ -1,8 +1,8 @@
 exports.run = (msg,client,Discord,cmd,color,arg1) => {
       let help=require('./help.json');
-      let ani="",utl="",sr="",trn="",fn="",mem="";
-      for(var i=0;i<help.anime.length;i++){
-             ani+=(i<(help.anime.length-1))?`\`${help.anime[i]}\` ; `:`\`${help.anime[i]}\``;
+      let rct="",utl="",sr="",trn="",fn="",mem="";
+      for(var i=0;i<help.react.length;i++){
+             rct+=(i<(help.react.length-1))?`\`${help.react[i]}\` ; `:`\`${help.react[i]}\``;
       }
       for(var i=0;i<help.utility.length;i++){
              utl+=(i<(help.utility.length-1))?`\`${help.utility[i]}\` ; `:`\`${help.utility[i]}\``;
@@ -22,11 +22,11 @@ exports.run = (msg,client,Discord,cmd,color,arg1) => {
       let em=new Discord.RichEmbed()
       .setTitle('Help Box')
       .addField('General',trn)
-      .addField('Anime',ani)
+      .addField('React',rct)
       .addField('Search stuffs',sr)
-      .addField('Fun',fn,true)
-      .addField('Memes',mem,true)
-      .addField('Utility',utl,true)
+      .addField('Fun',fn)
+      .addField('Memes',mem)
+      .addField('Utility',utl)
       .setColor(color)
       .setThumbnail(client.user.avatarURL)
       .setTimestamp(new Date())
