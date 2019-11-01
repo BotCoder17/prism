@@ -1,7 +1,7 @@
 exports.run = (msg,client,Discord,color) => {
     var xkcd = require('xkcd');
-    let opts = Math.floor(Math.random()*2000)
-    xkcd(opts,function (data) {
+    let num = Math.floor(Math.random()*2000)
+    xkcd(num,function (data) {
         let xc=new Discord.RichEmbed()
         .setTitle(data.title);
         if(data.alt!=''){
