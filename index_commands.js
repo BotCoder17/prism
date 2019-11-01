@@ -26,6 +26,10 @@ exports.run = (msg,client,Discord,pf,color,arg0,arg01,arg1,cmd,pf2,ownerID,gif_a
            let jks=require('./dadjokes.js');
            jks.run(msg,client,Discord,color);
         break;
+        case 'yt':case 'youtube':
+           let yts=require('./ytsearch.js');
+           yts.run(msg,client,Discord,arg1);
+        break;
         case 'help':
             let help=require('./help.js');
             help.run(msg,client,Discord,cmd,color,arg1);
