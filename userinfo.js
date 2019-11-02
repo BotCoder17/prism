@@ -23,6 +23,13 @@ exports.run = (msg,client,Discord,color,arg01) => {
              msg.channel.send(`Can't find the user`);
          });
     }else{
+        let rls="";
+               msg.member.roles.map(r => {
+               if(r.id!=msg.guild.id)
+                   rls+=`<@&${r.id}>  `
+               else
+                  rls+=`${r.name}  `
+               })
       let csd=new Discord.RichEmbed()
              .setTitle('User Info')
              .setColor(color)
@@ -30,6 +37,7 @@ exports.run = (msg,client,Discord,color,arg01) => {
              .addField('Name',msg.author.username)
              .addField('ID',msg.author.id)
              .addField('Tag',msg.author.tag)
+             .addField('Roles',rls)
              .addField('Status',msg.author.presence.status);
              try{
                csd.addField(`Joined ${msg.guild.name} on`,new Date(msg.guild.members.get(msg.author.id).joinedTimestamp).toGMTString());
