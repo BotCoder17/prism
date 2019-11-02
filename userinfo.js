@@ -10,7 +10,7 @@ exports.run = (msg,client,Discord,color,arg01) => {
                else
                   rls+=`${r.name}  `
                })
-           }catch(err){}
+           }catch(err){rls="";}
              let csd=new Discord.RichEmbed()
              .setTitle('User Info')
              .setColor(color)
