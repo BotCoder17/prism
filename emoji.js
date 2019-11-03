@@ -22,7 +22,6 @@ exports.run = (msg,Discord,client,color,arg1) => {
     }
   }
      console.log(arg1)
-try{
   if(id.length==18){
     ani=ani.toLowerCase();
     let y=new Discord.RichEmbed()
@@ -46,5 +45,4 @@ try{
         msg.channel.send(y);
     }); 
   }
- }catch(err){}
 }
