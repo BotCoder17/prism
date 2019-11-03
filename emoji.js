@@ -1,7 +1,6 @@
-exports.run = (msg,Discord,client,color,arg01) => {
-     let yui='',skd=arg01;
-     for(var i=0;i<skd.length;i++) yui+=skd.charAt(i);
-     let c=yui,name='',id='',ani='';
+exports.run = (msg,Discord,client,color,arg1) => {
+     let c=arg1;
+     let name='',id='',ani='';
      let ls=c.lastIndexOf(':');
      let fs=c.indexOf(':');
      for(var i=fs;i<ls;i++){
@@ -10,7 +9,7 @@ exports.run = (msg,Discord,client,color,arg01) => {
           name+=c1;
        }
      }
-    for(var i=ls;i<yui.length;i++){
+    for(var i=ls;i<arg1.length;i++){
     let c1=c.charAt(i);
     if(c1!='>'&&c1!=':'){
        id+=c1;
@@ -22,6 +21,7 @@ exports.run = (msg,Discord,client,color,arg01) => {
        ani+=c1;
     }
   }
+try{
   if(id.length==18){
     ani=ani.toLowerCase();
     let y=new Discord.RichEmbed()
@@ -45,4 +45,5 @@ exports.run = (msg,Discord,client,color,arg01) => {
         msg.channel.send(y);
     }); 
   }
+ }catch(err){}
 }
