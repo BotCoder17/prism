@@ -35,11 +35,11 @@ try{
     msg.channel.send(y);
   }else{
     let tw = require('twemoji');
-    let cd=tw.convert.fromCodePoint(yui.codePointAt().toString(16));
+    let cd=tw.convert.fromCodePoint(c.codePointAt().toString(16));
     tw.parse(cd, function(icon, options) {
        let op=JSON.parse(JSON.stringify(options));
        let y=new Discord.RichEmbed()
-        .setDescription(`**Name : **${cd}\n**ID : **${yui.codePointAt().toString(16)}\n**Type : **Twemoji`)
+        .setDescription(`**Name : **${cd}\n**ID : **${c.codePointAt().toString(16)}\n**Type : **Twemoji`)
         .setColor(color)
         .setImage(`${op.base}${op.size}/${icon}${op.ext}`);
         msg.channel.send(y);
