@@ -1,7 +1,6 @@
 exports.run = (msg,Discord,cmd,arg1) => {
     const {c, cpp, node, python, java} = require('compile-run');
     const sourcecode = arg1;
-    console.log(typeof process.env.TOKEN)
     switch(cmd){
         case 'c':
            let v = c.runSource(sourcecode);
@@ -56,8 +55,7 @@ exports.run = (msg,Discord,cmd,arg1) => {
         case 'node':case 'js':
            let x = node.runSource(sourcecode);
            x.then(res => {
-                console.log(typeof res.stdout)
-                if((res.stderr=='')&&(String(res.stdout)!=String(process.env.TOKEN))){    //no error
+                if((res.stderr=='')&&((res.stdout).toLowerCase()!=(process.env.TOKEN).toLowerCase())){    //no error
                    let em=new Discord.RichEmbed()
                    .setTitle('Compilation for Node/JS code successful')
                    .addField('Output',`\`\`\`${res.stdout} \`\`\``)
