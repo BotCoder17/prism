@@ -1,4 +1,4 @@
-exports.run = (msg,client,Discord,cmd,color,arg1) => {
+exports.run = (msg,client,Discord,cmd,arg1) => {
     const {c, cpp, node, python, java} = require('compile-run');
     const sourcecode = arg1;
     switch(cmd){
