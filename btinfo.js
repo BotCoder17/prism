@@ -14,7 +14,7 @@ exports.run = (msg,client,Discord,color,pf,arg0) => {
       .addField(`Date of Creation`,`${new Date(p.createdTimestamp).toGMTString()}`)
       .addField(`Prefix`,`${pf}`)
       .addField(`Owner`,"["+(p.owner.tag)+"](https://discordapp.com/users/575239801402294278)")
-     /* .addField(`Invite ${client.user.username}`,
+     /* .addField(`Invite ${client.user.username} to your server`,
                 "[Click here](https://discordapp.com/api/oauth2/authorize?client_id=550416455532019712&permissions=8&scope=bot)") */
       msg.channel.send(d);
    }).catch(console.log);
