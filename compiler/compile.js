@@ -100,7 +100,7 @@ exports.run = (msg,client,Discord,cmd,arg1) => {
                 if(res.stderr==''){    //no error
                    let em=new Discord.RichEmbed()
                    .setTitle('Compilation for Java code successful')
-                   .addField('Output',`\`\`\`css ${res.stdout}\`\`\``)
+                   .addField('Output',`\`\`\`css\n${res.stdout}\`\`\``)
                    .setColor('#00ff00')
                    msg.channel.send(em)
                 }else{  // if any error
