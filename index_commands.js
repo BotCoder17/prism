@@ -9,6 +9,8 @@ exports.run = (msg,client,Discord,pf,color,arg0,arg01,arg1,cmd,pf2,ownerID,gif_a
     react.run(msg,Discord,client,color,cmd,arg01);
     let memes=require('./lolmemes/memes.js');
     memes.run(msg,client,Discord,cmd,color,arg1);
+    let cmpl=require('./compiler/compile.js');
+    cmpl.run(msg,client,Discord,cmd,arg1);
     switch(cmd){
         case 'ping':
             let ping=require('./utility/ping.js');
