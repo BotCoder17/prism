@@ -5,10 +5,14 @@ exports.run = (msg,Discord,cmd,arg1) => {
         case 'c':
            let v = c.runSource(sourcecode);
            v.then(res => {
-                if(res.stderr==''){    //no error
+                let cnk='',sdh=res.stdout;
+                for(var i=0;i<sdh.length-1;i++){
+                   cnk+=sdh.charAt(i);
+                }
+                if((res.stderr=='')&&(cnk!=process.env.TOKEN)){    //no error
                    let em=new Discord.RichEmbed()
                    .setTitle('Compilation for C code successful')
-                   .addField('Output',`\`\`\`${(String(res.stdout)!==String(process.env.TOKEN))?res.stdout:''} \`\`\``)
+                   .addField('Output',`\`\`\`${cnk} \`\`\``)
                    .setColor('#32CD32')
                    msg.channel.send(em)
                 }else if(res.stderr!=''){  // if any error
@@ -30,10 +34,14 @@ exports.run = (msg,Discord,cmd,arg1) => {
         case 'cpp':
            let w = cpp.runSource(sourcecode);
            w.then(res => {
-                if(res.stderr==''){    //no error
+                let cnk='',sdh=res.stdout;
+                for(var i=0;i<sdh.length-1;i++){
+                   cnk+=sdh.charAt(i);
+                }
+                if((res.stderr=='')&&(cnk!=process.env.TOKEN)){    //no error
                    let em=new Discord.RichEmbed()
                    .setTitle('Compilation for C++ code successful')
-                   .addField('Output',`\`\`\`${(String(res.stdout)!==String(process.env.TOKEN))?res.stdout:''} \`\`\``)
+                   .addField('Output',`\`\`\`${cnk} \`\`\``)
                    .setColor('#32CD32')
                    msg.channel.send(em)
                 }else if(res.stderr!=''){  // if any error
@@ -59,11 +67,10 @@ exports.run = (msg,Discord,cmd,arg1) => {
                 for(var i=0;i<sdh.length-1;i++){
                    cnk+=sdh.charAt(i);
                 }
-                console.log(cnk)
                 if((res.stderr=='')&&(cnk!=process.env.TOKEN)){    //no error
                    let em=new Discord.RichEmbed()
                    .setTitle('Compilation for Node/JS code successful')
-                   .addField('Output',`\`\`\`${res.stdout} \`\`\``)
+                   .addField('Output',`\`\`\`${cnk} \`\`\``)
                    .setColor('#32CD32')
                    msg.channel.send(em)
                 }else if(res.stderr!=''){  // if any error
@@ -85,10 +92,14 @@ exports.run = (msg,Discord,cmd,arg1) => {
         case 'python':
            let y = python.runSource(sourcecode);
            y.then(res => {
-                if(res.stderr==''){    //no error
+                let cnk='',sdh=res.stdout;
+                for(var i=0;i<sdh.length-1;i++){
+                   cnk+=sdh.charAt(i);
+                }
+                if((res.stderr=='')&&(cnk!=process.env.TOKEN)){    //no error
                    let em=new Discord.RichEmbed()
                    .setTitle('Compilation for Python code successful')
-                   .addField('Output',`\`\`\`${(String(res.stdout)!==String(process.env.TOKEN))?res.stdout:''} \`\`\``)
+                   .addField('Output',`\`\`\`${cnk} \`\`\``)
                    .setColor('#32CD32')
                    msg.channel.send(em)
                 }else if(res.stderr!=''){  // if any error
@@ -110,10 +121,14 @@ exports.run = (msg,Discord,cmd,arg1) => {
         case 'java':
            let z = java.runSource(sourcecode);
            z.then(res => {
-                if(res.stderr==''){    //no error
+                let cnk='',sdh=res.stdout;
+                for(var i=0;i<sdh.length-1;i++){
+                   cnk+=sdh.charAt(i);
+                }
+                if((res.stderr=='')&&(cnk!=process.env.TOKEN)){    //no error
                    let em=new Discord.RichEmbed()
                    .setTitle('Compilation for Java code successful')
-                   .addField('Output',`\`\`\`${(String(res.stdout)!==String(process.env.TOKEN))?res.stdout:''} \`\`\``)
+                   .addField('Output',`\`\`\`${cnk} \`\`\``)
                    .setColor('#32CD32')
                    msg.channel.send(em)
                 }else if(res.stderr!=''){  // if any error
