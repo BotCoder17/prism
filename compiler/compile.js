@@ -9,7 +9,7 @@ exports.run = (msg,client,Discord,cmd,arg1) => {
                    let em=new Discord.RichEmbed()
                    .setTitle('Compilation for C code successful')
                    .addField('Output',`\`\`\`css\n${res.stdout}\`\`\``)
-                   .setColor('#00ff00')
+                   .setColor('#32CD32')
                    msg.channel.send(em)
                 }else{  // if any error
                     let em=new Discord.RichEmbed()
@@ -32,7 +32,7 @@ exports.run = (msg,client,Discord,cmd,arg1) => {
                    let em=new Discord.RichEmbed()
                    .setTitle('Compilation for C++ code successful')
                    .addField('Output',`\`\`\`css\n${res.stdout}\`\`\``)
-                   .setColor('#00ff00')
+                   .setColor('#32CD32')
                    msg.channel.send(em)
                 }else{  // if any error
                     let em=new Discord.RichEmbed()
@@ -55,7 +55,7 @@ exports.run = (msg,client,Discord,cmd,arg1) => {
                    let em=new Discord.RichEmbed()
                    .setTitle('Compilation for Node/JS code successful')
                    .addField('Output',`\`\`\`css\n${res.stdout}\`\`\``)
-                   .setColor('#00ff00')
+                   .setColor('#32CD32')
                    msg.channel.send(em)
                 }else{  // if any error
                     let em=new Discord.RichEmbed()
@@ -78,7 +78,7 @@ exports.run = (msg,client,Discord,cmd,arg1) => {
                    let em=new Discord.RichEmbed()
                    .setTitle('Compilation for Python code successful')
                    .addField('Output',`\`\`\`css\n${res.stdout}\`\`\``)
-                   .setColor('#00ff00')
+                   .setColor('#32CD32')
                    msg.channel.send(em)
                 }else{  // if any error
                     let em=new Discord.RichEmbed()
@@ -101,7 +101,7 @@ exports.run = (msg,client,Discord,cmd,arg1) => {
                    let em=new Discord.RichEmbed()
                    .setTitle('Compilation for Java code successful')
                    .addField('Output',`\`\`\`css\n${res.stdout}\`\`\``)
-                   .setColor('#00ff00')
+                   .setColor('#32CD32')
                    msg.channel.send(em)
                 }else{  // if any error
                     let em=new Discord.RichEmbed()
