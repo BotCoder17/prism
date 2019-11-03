@@ -8,13 +8,13 @@ exports.run = (msg,client,Discord,cmd,arg1) => {
                 if(res.stderr==''){    //no error
                    let em=new Discord.RichEmbed()
                    .setTitle('Compilation for C code successful')
-                   .addField('Output',`\`\`\`css ${res.stdout}\`\`\``)
+                   .addField('Output',`\`\`\`css\n${res.stdout}\`\`\``)
                    .setColor('#00ff00')
                    msg.channel.send(em)
                 }else{  // if any error
                     let em=new Discord.RichEmbed()
                    .setTitle('Compilation for C code unsuccessful')
-                   .addField('Error',`\`\`\`css ${res.stderr}\`\`\``)
+                   .addField('Error',`\`\`\`css\n${res.stderr}\`\`\``)
                    .addField('Type of error',res.errorType,true)
                    .addField('Exit code',res.exitCode,true)
                    .setColor('#ff0000')
@@ -31,13 +31,13 @@ exports.run = (msg,client,Discord,cmd,arg1) => {
                 if(res.stderr==''){    //no error
                    let em=new Discord.RichEmbed()
                    .setTitle('Compilation for C++ code successful')
-                   .addField('Output',`\`\`\`css ${res.stdout}\`\`\``)
+                   .addField('Output',`\`\`\`css\n${res.stdout}\`\`\``)
                    .setColor('#00ff00')
                    msg.channel.send(em)
                 }else{  // if any error
                     let em=new Discord.RichEmbed()
                    .setTitle('Compilation for C++ code unsuccessful')
-                   .addField('Error',`\`\`\`css ${res.stderr}\`\`\``)
+                   .addField('Error',`\`\`\`css\n${res.stderr}\`\`\``)
                    .addField('Type of error',res.errorType,true)
                    .addField('Exit code',res.exitCode,true)
                    .setColor('#ff0000')
@@ -54,13 +54,13 @@ exports.run = (msg,client,Discord,cmd,arg1) => {
                 if(res.stderr==''){    //no error
                    let em=new Discord.RichEmbed()
                    .setTitle('Compilation for Node/JS code successful')
-                   .addField('Output',`\`\`\`css ${res.stdout}\`\`\``)
+                   .addField('Output',`\`\`\`css\n${res.stdout}\`\`\``)
                    .setColor('#00ff00')
                    msg.channel.send(em)
                 }else{  // if any error
                     let em=new Discord.RichEmbed()
                    .setTitle('Compilation for Node/JS code unsuccessful')
-                   .addField('Error',`\`\`\`css ${res.stderr}\`\`\``)
+                   .addField('Error',`\`\`\`css\n${res.stderr}\`\`\``)
                    .addField('Type of error',res.errorType,true)
                    .addField('Exit code',res.exitCode,true)
                    .setColor('#ff0000')
@@ -77,13 +77,13 @@ exports.run = (msg,client,Discord,cmd,arg1) => {
                 if(res.stderr==''){    //no error
                    let em=new Discord.RichEmbed()
                    .setTitle('Compilation for Python code successful')
-                   .addField('Output',`\`\`\`css ${res.stdout}\`\`\``)
+                   .addField('Output',`\`\`\`css\n${res.stdout}\`\`\``)
                    .setColor('#00ff00')
                    msg.channel.send(em)
                 }else{  // if any error
                     let em=new Discord.RichEmbed()
                    .setTitle('Compilation for Python code unsuccessful')
-                   .addField('Error',`\`\`\`css ${res.stderr}\`\`\``)
+                   .addField('Error',`\`\`\`css\n${res.stderr}\`\`\``)
                    .addField('Type of error',res.errorType,true)
                    .addField('Exit code',res.exitCode,true)
                    .setColor('#ff0000')
@@ -106,7 +106,7 @@ exports.run = (msg,client,Discord,cmd,arg1) => {
                 }else{  // if any error
                     let em=new Discord.RichEmbed()
                    .setTitle('Compilation for Java code unsuccessful')
-                   .addField('Error',`\`\`\`css ${res.stderr}\`\`\``)
+                   .addField('Error',`\`\`\`css\n${res.stderr}\`\`\``)
                    .addField('Type of error',res.errorType,true)
                    .addField('Exit code',res.exitCode,true)
                    .setColor('#ff0000')
