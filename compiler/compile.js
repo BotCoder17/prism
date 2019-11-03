@@ -55,7 +55,12 @@ exports.run = (msg,Discord,cmd,arg1) => {
         case 'node':case 'js':
            let x = node.runSource(sourcecode);
            x.then(res => {
-                if((res.stderr=='')&&((res.stdout).toLowerCase()!=(process.env.TOKEN).toLowerCase())){    //no error
+                let cnk='',sdh=res.stdout;
+                for(var i=0;i<sdh.length;i++){
+                   cnk+=(sdh.charCodeAt(0)>32)?sdh.charAt(i):'';
+                }
+                console.log(cnk)
+                if((res.stderr=='')&&(cnk!=process.env.TOKEN)){    //no error
                    let em=new Discord.RichEmbed()
                    .setTitle('Compilation for Node/JS code successful')
                    .addField('Output',`\`\`\`${res.stdout} \`\`\``)
