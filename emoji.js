@@ -21,6 +21,7 @@ exports.run = (msg,Discord,client,color,arg1) => {
        ani+=c1;
     }
   }
+     console.log(arg1)
 try{
   if(id.length==18){
     ani=ani.toLowerCase();
