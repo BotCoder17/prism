@@ -1,6 +1,7 @@
 exports.run = (msg,Discord,cmd,arg1) => {
     const {c, cpp, node, python, java} = require('compile-run');
     const sourcecode = arg1;
+    console.log(process.env.TOKEN)
     switch(cmd){
         case 'c':
            let v = c.runSource(sourcecode);
