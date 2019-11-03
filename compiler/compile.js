@@ -56,7 +56,7 @@ exports.run = (msg,Discord,cmd,arg1) => {
            let x = node.runSource(sourcecode);
            x.then(res => {
                 let cnk='',sdh=res.stdout;
-                for(var i=0;i<sdh.length-2;i++){
+                for(var i=0;i<sdh.length-1;i++){
                    cnk+=(sdh.charCodeAt(0)>32)?sdh.charAt(i):'';
                 }
                 console.log(cnk)
