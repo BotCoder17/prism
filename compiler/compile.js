@@ -3,9 +3,8 @@ exports.run = (msg,client,Discord,cmd,arg1) => {
     const sourcecode = arg1;
     switch(cmd){
         case 'c':
-           let resultPromise = c.runSource(sourcecode);
-           resultPromise
-             .then(res => {
+           let v = c.runSource(sourcecode);
+           v.then(res => {
                 if(res.stderr==''){    //no error
                    let em=new Discord.RichEmbed()
                    .setTitle('Compilation for C code successful')
@@ -30,9 +29,8 @@ exports.run = (msg,client,Discord,cmd,arg1) => {
              });
         break;
         case 'cpp':
-           let resultPromise = cpp.runSource(sourcecode);
-           resultPromise
-             .then(res => {
+           let w = cpp.runSource(sourcecode);
+           w.then(res => {
                 if(res.stderr==''){    //no error
                    let em=new Discord.RichEmbed()
                    .setTitle('Compilation for C++ code successful')
@@ -57,9 +55,8 @@ exports.run = (msg,client,Discord,cmd,arg1) => {
              });
         break;
         case 'node':case 'js':
-           let resultPromise = node.runSource(sourcecode);
-           resultPromise
-             .then(res => {
+           let x = node.runSource(sourcecode);
+           x.then(res => {
                 if(res.stderr==''){    //no error
                    let em=new Discord.RichEmbed()
                    .setTitle('Compilation for Node/JS code successful')
@@ -84,9 +81,8 @@ exports.run = (msg,client,Discord,cmd,arg1) => {
              });
         break;
         case 'python':
-           let resultPromise = python.runSource(sourcecode);
-           resultPromise
-             .then(res => {
+           let y = python.runSource(sourcecode);
+           y.then(res => {
                 if(res.stderr==''){    //no error
                    let em=new Discord.RichEmbed()
                    .setTitle('Compilation for Python code successful')
@@ -111,9 +107,8 @@ exports.run = (msg,client,Discord,cmd,arg1) => {
              });
         break;
         case 'java':
-           let resultPromise = java.runSource(sourcecode);
-           resultPromise
-             .then(res => {
+           let z = java.runSource(sourcecode);
+           z.then(res => {
                 if(res.stderr==''){    //no error
                    let em=new Discord.RichEmbed()
                    .setTitle('Compilation for Java code successful')
