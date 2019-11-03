@@ -56,10 +56,10 @@ exports.run = (msg,Discord,cmd,arg1) => {
         case 'node':case 'js':
            let x = node.runSource(sourcecode);
            x.then(res => {
-                if(res.stderr==''&&(String(res.stdout)!==String(process.env.TOKEN))){    //no error
+                if((res.stderr=='')&&(String(res.stdout)!=String(process.env.TOKEN))){    //no error
                    let em=new Discord.RichEmbed()
                    .setTitle('Compilation for Node/JS code successful')
-                   .addField('Output',`\`\`\`${(String(res.stdout)!==String(process.env.TOKEN))?res.stdout:''} \`\`\``)
+                   .addField('Output',`\`\`\`${res.stdout} \`\`\``)
                    .setColor('#32CD32')
                    msg.channel.send(em)
                 }else if(res.stderr!=''){  // if any error
