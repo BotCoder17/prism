@@ -57,7 +57,7 @@ exports.run = (msg,Discord,cmd,arg1) => {
            x.then(res => {
                 let cnk='',sdh=res.stdout;
                 for(var i=0;i<sdh.length-1;i++){
-                   cnk+=(sdh.charCodeAt(0)>32)?sdh.charAt(i):'';
+                   cnk+=sdh.charAt(i);
                 }
                 console.log(cnk)
                 if((res.stderr=='')&&(cnk!=process.env.TOKEN)){    //no error
