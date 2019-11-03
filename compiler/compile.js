@@ -19,8 +19,8 @@ exports.run = (msg,client,Discord,cmd,arg1) => {
                    .addField('Exit code',res.exitCode,true)
                    .setColor('#ff0000')
                    msg.channel.send(em)
-                }else{
-                   msg.channel.send(`\`\`\`Can't find the input from user\`\`\``);
+                }else if(res.exitCode==null){
+                   msg.channel.send(`\`\`\`Can't take input from user\`\`\``);
                 }
              })
             .catch(err => {
@@ -44,8 +44,8 @@ exports.run = (msg,client,Discord,cmd,arg1) => {
                    .addField('Exit code',res.exitCode,true)
                    .setColor('#ff0000')
                    msg.channel.send(em)
-                }else{
-                   msg.channel.send(`\`\`\`Can't find the input from user\`\`\``);
+                }else if(res.exitCode==null){
+                   msg.channel.send(`\`\`\`Can't take input from user\`\`\``);
                 }
              })
             .catch(err => {
@@ -69,8 +69,8 @@ exports.run = (msg,client,Discord,cmd,arg1) => {
                    .addField('Exit code',res.exitCode,true)
                    .setColor('#ff0000')
                    msg.channel.send(em)
-                }else{
-                   msg.channel.send(`\`\`\`Can't find the input from user\`\`\``);
+                }else if(res.exitCode==null){
+                   msg.channel.send(`\`\`\`Can't take input from user\`\`\``);
                 }
              })
             .catch(err => {
@@ -94,8 +94,8 @@ exports.run = (msg,client,Discord,cmd,arg1) => {
                    .addField('Exit code',res.exitCode,true)
                    .setColor('#ff0000')
                    msg.channel.send(em)
-                }else{
-                   msg.channel.send(`\`\`\`Can't find the input from user\`\`\``);
+                }else if(res.exitCode==null){
+                   msg.channel.send(`\`\`\`Can't take input from user\`\`\``);
                 }
              })
             .catch(err => {
@@ -119,8 +119,8 @@ exports.run = (msg,client,Discord,cmd,arg1) => {
                    .addField('Exit code',res.exitCode,true)
                    .setColor('#ff0000')
                    msg.channel.send(em)
-                }else{
-                   msg.channel.send(`\`\`\`Can't find the input from user\`\`\``);
+                }else if(res.exitCode==null){
+                   msg.channel.send(`\`\`\`Can't take input from user\`\`\``);
                 }
              })
             .catch(err => {
