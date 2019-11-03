@@ -1,5 +1,5 @@
 exports.run = (msg,Discord,client,color,arg1) => {
-     let c=arg1;
+     let c=arg1.trim();
      let name='',id='',ani='';
      let ls=c.lastIndexOf(':');
      let fs=c.indexOf(':');
@@ -21,7 +21,6 @@ exports.run = (msg,Discord,client,color,arg1) => {
        ani+=c1;
     }
   }
-     console.log(arg1)
  try{
   if(id.length==18){
     ani=ani.toLowerCase();
