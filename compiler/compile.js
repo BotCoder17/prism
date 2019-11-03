@@ -8,7 +8,7 @@ exports.run = (msg,Discord,cmd,arg1) => {
                 if(res.stderr==''){    //no error
                    let em=new Discord.RichEmbed()
                    .setTitle('Compilation for C code successful')
-                   .addField('Output',`\`\`\`${(res.stdout!=process.env.TOKEN)?res.stdout:''} \`\`\``)
+                   .addField('Output',`\`\`\`${(String(res.stdout)!=process.env.TOKEN)?res.stdout:''} \`\`\``)
                    .setColor('#32CD32')
                    msg.channel.send(em)
                 }else if(res.stderr!=''){  // if any error
@@ -33,7 +33,7 @@ exports.run = (msg,Discord,cmd,arg1) => {
                 if(res.stderr==''){    //no error
                    let em=new Discord.RichEmbed()
                    .setTitle('Compilation for C++ code successful')
-                   .addField('Output',`\`\`\`${(res.stdout!=process.env.TOKEN)?res.stdout:''} \`\`\``)
+                   .addField('Output',`\`\`\`${(String(res.stdout)!=process.env.TOKEN)?res.stdout:''} \`\`\``)
                    .setColor('#32CD32')
                    msg.channel.send(em)
                 }else if(res.stderr!=''){  // if any error
@@ -58,7 +58,7 @@ exports.run = (msg,Discord,cmd,arg1) => {
                 if(res.stderr==''){    //no error
                    let em=new Discord.RichEmbed()
                    .setTitle('Compilation for Node/JS code successful')
-                   .addField('Output',`\`\`\`${(res.stdout!=process.env.TOKEN)?res.stdout:''} \`\`\``)
+                   .addField('Output',`\`\`\`${(String(res.stdout)!=process.env.TOKEN)?res.stdout:''} \`\`\``)
                    .setColor('#32CD32')
                    msg.channel.send(em)
                 }else if(res.stderr!=''){  // if any error
@@ -83,7 +83,7 @@ exports.run = (msg,Discord,cmd,arg1) => {
                 if(res.stderr==''){    //no error
                    let em=new Discord.RichEmbed()
                    .setTitle('Compilation for Python code successful')
-                   .addField('Output',`\`\`\`${(res.stdout!=process.env.TOKEN)?res.stdout:''} \`\`\``)
+                   .addField('Output',`\`\`\`${(String(res.stdout)!=process.env.TOKEN)?res.stdout:''} \`\`\``)
                    .setColor('#32CD32')
                    msg.channel.send(em)
                 }else if(res.stderr!=''){  // if any error
@@ -108,7 +108,7 @@ exports.run = (msg,Discord,cmd,arg1) => {
                 if(res.stderr==''){    //no error
                    let em=new Discord.RichEmbed()
                    .setTitle('Compilation for Java code successful')
-                   .addField('Output',`\`\`\`${(res.stdout!=process.env.TOKEN)?res.stdout:''} \`\`\``)
+                   .addField('Output',`\`\`\`${(String(res.stdout)!=process.env.TOKEN)?res.stdout:''} \`\`\``)
                    .setColor('#32CD32')
                    msg.channel.send(em)
                 }else if(res.stderr!=''){  // if any error
