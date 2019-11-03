@@ -1,7 +1,7 @@
 exports.run = (msg,client,Discord,pf,color,arg0,arg01,arg1,cmd,pf2,ownerID,gif_api) => {
   if(pf2.toLowerCase()!=pf.toLowerCase()) {
-      let prm=require('./btinfo.js');  // bot info
-      prm.run(msg,client,Discord,color,pf,arg0);
+      let btin=require('./btinfo.js');  // bot info
+      btin.run(msg,client,Discord,color,pf,arg0);
   }
 /*****************/
  else if(pf2.toLowerCase()==pf.toLowerCase()){
