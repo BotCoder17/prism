@@ -89,7 +89,7 @@ exports.run = (msg,Discord,cmd,arg1) => {
                 console.log(err);
              });
         break;
-        case 'python':
+        case 'python':case 'py':
            let y = python.runSource(sourcecode);
            y.then(res => {
                 let cnk='',sdh=res.stdout;
