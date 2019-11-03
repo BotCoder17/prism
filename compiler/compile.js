@@ -58,7 +58,7 @@ exports.run = (msg,client,Discord,cmd,arg1) => {
                 if(res.stderr==''){    //no error
                    let em=new Discord.RichEmbed()
                    .setTitle('Compilation for Node/JS code successful')
-                   .addField('Output',`\`\`\` ${res.stdout} \`\`\``)
+                   .addField('Output',`\`\`\` \n${res.stdout} \`\`\``)
                    .setColor('#32CD32')
                    msg.channel.send(em)
                 }else if(res.stderr!=''){  // if any error
