@@ -10,10 +10,9 @@ exports.run = (msg,client,Discord,cmd,color,arg1) => {
              if(err) return msg.channel.send('Mention a topic');
              let r=res;     // Array of meme objects, each meme object of the format { title, image_url }
              let ser=Math.floor(Math.random()*r.length);
-             const imgm = new Discord.Attachment(r[ser].image_url);
              let mem=new Discord.RichEmbed()
                 .setTitle(r[ser].title).setURL(r[ser].image_url)
-                .setImage(imgm)
+                .setImage(r[ser].image_url)
                 .setColor(color)
                 .setFooter(`Dankmemes for ${msg.author.username}`,msg.author.avatarURL)
                 .setTimestamp(new Date())
@@ -28,10 +27,9 @@ exports.run = (msg,client,Discord,cmd,color,arg1) => {
              if(err) return msg.channel.send('Mention a topic');
              let r=res;     // Array of meme objects, each meme object of the format { title, image_url }
              let ser=Math.floor(Math.random()*r.length);
-             const imgm2 = new Discord.Attachment(r[ser].image_url);
              let mem=new Discord.RichEmbed()
                 .setTitle(r[ser].title).setURL(r[ser].image_url)
-                .setImage(imgm2)
+                .setImage(r[ser].image_url)
                 .setColor(color)
                 .setFooter(`Memes for ${msg.author.username}`,msg.author.avatarURL)
                 .setTimestamp(new Date())
@@ -46,10 +44,9 @@ exports.run = (msg,client,Discord,cmd,color,arg1) => {
              if(err) return msg.channel.send('Mention a topic');
              let r=res;     // Array of meme objects, each meme object of the format { title, image_url }
              let ser=Math.floor(Math.random()*r.length);
-             const imgm3 = new Discord.Attachment(r[ser].image_url);
              let mem=new Discord.RichEmbed()
                 .setTitle(r[ser].title).setURL(r[ser].image_url)
-                .setImage(imgm3)
+                .setImage(r[ser].image_url)
                 .setColor(color)
                 .setFooter(`Funny memes for ${msg.author.username}`,msg.author.avatarURL)
                 .setTimestamp(new Date())
@@ -64,10 +61,9 @@ exports.run = (msg,client,Discord,cmd,color,arg1) => {
              if(err) return msg.channel.send('Mention a topic');
              let r=res;     // Array of meme objects, each meme object of the format { title, image_url }
              let ser=Math.floor(Math.random()*r.length);
-             const imgm4 = new Discord.Attachment(r[ser].image_url);
              let mem=new Discord.RichEmbed()
                 .setTitle(r[ser].title).setURL(r[ser].image_url)
-                .setImage(imgm4)
+                .setImage(r[ser].image_url)
                 .setColor(color)
                 .setFooter(`Gif memes for ${msg.author.username}`,msg.author.avatarURL)
                 .setTimestamp(new Date())
