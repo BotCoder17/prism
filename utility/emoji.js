@@ -1,4 +1,4 @@
-exports.run = (msg,Discord,client,color,arg1) => {
+exports.run = (msg,Discord,client,arg1) => {
      let c=arg1.trim();
      let name='',id='',ani='';
      let ls=c.lastIndexOf(':');
@@ -24,25 +24,23 @@ exports.run = (msg,Discord,client,color,arg1) => {
  try{
   if(id.length==18){
     ani=ani.toLowerCase();
-    let y=new Discord.RichEmbed()
-    .setDescription(`**Name : **${name}\n**ID : **${id}\n**Type : **Custom`)
-    .setColor(color)
+    let img="";
     if(ani=='a'){
-      y.setImage(`https://cdn.discordapp.com/emojis/${id}.gif?v=1`);
+      img=`https://cdn.discordapp.com/emojis/${id}.gif?v=1`;
     }else{
-      y.setImage(`https://cdn.discordapp.com/emojis/${id}.png?v=1`);
+      img=`https://cdn.discordapp.com/emojis/${id}.png?v=1`;
     }
-    msg.channel.send(y);
+    msg.channel.send(`**Name : **${name}\n**ID : **${id}\n**Type : **Custom`, {
+          file: img
+    });
   }else{
     let tw = require('twemoji');
     let cd=tw.convert.fromCodePoint(c.codePointAt().toString(16));
     tw.parse(cd, function(icon, options) {
        let op=JSON.parse(JSON.stringify(options));
-       let y=new Discord.RichEmbed()
-        .setDescription(`**Name : **${cd}\n**ID : **${c.codePointAt().toString(16)}\n**Type : **Twemoji`)
-        .setColor(color)
-        .setImage(`${op.base}${op.size}/${icon}${op.ext}`);
-        msg.channel.send(y);
+       msg.channel.send(`**Name : **${cd}\n**ID : **${c.codePointAt().toString(16)}\n**Type : **Twemoji`, {
+            file: `${op.base}${op.size}/${icon}${op.ext}`
+       });
     }); 
   }
  }catch(err){}
