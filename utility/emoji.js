@@ -30,16 +30,18 @@ exports.run = (msg,Discord,client,arg1) => {
     }else{
       img=`https://cdn.discordapp.com/emojis/${id}.png?v=1`;
     }
+    const em = new Discord.Attachment(img);
     msg.channel.send(`**Name : **${name}\n**ID : **${id}\n**Type : **Custom`, {
-          file: img
+          file: em.url
     });
   }else{
     let tw = require('twemoji');
     let cd=tw.convert.fromCodePoint(c.codePointAt().toString(16));
     tw.parse(cd, function(icon, options) {
        let op=JSON.parse(JSON.stringify(options));
+       const em2 = new Discord.Attachment(`${op.base}${op.size}/${icon}${op.ext}`);
        msg.channel.send(`**Name : **${cd}\n**ID : **${c.codePointAt().toString(16)}\n**Type : **Twemoji`, {
-            file: `${op.base}${op.size}/${icon}${op.ext}`
+            file: em2
        });
     }); 
   }
