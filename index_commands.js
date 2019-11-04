@@ -74,7 +74,7 @@ exports.run = (msg,client,Discord,pf,color,arg0,arg01,arg1,cmd,pf2,ownerID,gif_a
         break;
         case 'emoji':
             let emoji=require('./utility/emoji.js');
-            emoji.run(msg,Discord,client,color,arg1);
+            emoji.run(msg,Discord,client,arg1);
         break;
         case 'weather':
             let weather=require('./search/temp.js');
