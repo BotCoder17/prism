@@ -30,9 +30,8 @@ exports.run = (msg,Discord,client,arg1) => {
     }else{
       img=`https://cdn.discordapp.com/emojis/${id}.png?v=1`;
     }
-    let em=new Discord.Attachment(img);
     msg.channel.send(`**Name : **${name}\n**ID : **${id}\n**Type : **Custom`, {
-          file: em
+          file: img
     });
   }else{
     let tw = require('twemoji');
