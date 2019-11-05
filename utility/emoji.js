@@ -24,13 +24,13 @@ exports.run = (msg,Discord,client,arg1) => {
  try{
   if(id.length==18){
     ani=ani.toLowerCase();
-    let img="";
+    let img=``;
     if(ani=='a'){
       img=`https://cdn.discordapp.com/emojis/${id}.gif?v=1`;
     }else{
       img=`https://cdn.discordapp.com/emojis/${id}.png?v=1`;
     }
-    const em = new Discord.Attachment(img);
+    let em=new Discord.Attachment(img);
     msg.channel.send(`**Name : **${name}\n**ID : **${id}\n**Type : **Custom`, {
           file: em.url
     });
