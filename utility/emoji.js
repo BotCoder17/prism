@@ -31,7 +31,11 @@ exports.run = (msg,Discord,client,arg1) => {
       img=`https://cdn.discordapp.com/emojis/${id}.png?v=1`;
     }
     msg.channel.send(`**Name : **${name}\n**ID : **${id}\n**Type : **Custom`, {
-          file: img
+          embed : {
+              image: {
+                 url: img
+              }
+          }
     });
   }else{
     let tw = require('twemoji');
