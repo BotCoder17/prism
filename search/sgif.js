@@ -10,12 +10,25 @@ exports.run = (msg,client,Discord,color,arg1,gif_api) => {
         if(err) return;
       //  console.log(res)
         console.log(res.data[0].images)
-        let g=new Discord.RichEmbed()
-           .setTitle(res.data[0].title).setURL(res.data[0].url)
-           .setImage(res.data[0].images.original_still.url)
-           .setColor(color)
-           .setTimestamp(new Date())
-           .setFooter(`For ${msg.author.username}`,msg.author.avatarURL)
-        msg.channel.send(g)
+        const Pagination = require('discord-paginationembed');
+         const embeds = [];
+         for (let i = 0; i < res.data.length; i++)
+            embeds.push(new Discord.RichEmbed().setImage(res.data[i].images.original_still).setTitle(res.data[i].title).setURL(res.data[i].url));
+         new Pagination.Embeds()
+              .setArray(embeds)
+              .setAuthorizedUsers([msg.author.id])
+              .setChannel(msg.channel)
+              .setPageIndicator(true)
+              .setColor(color)
+              .setPage(1)
+              .setTitle(`Image search for ${arg1}`)
+              .setTimeout(69000)
+              .setNavigationEmojis({
+                  back: '◀',
+                  forward: '▶',
+                  jump: '🔢',
+                  delete: '🗑'
+               })
+              .build();
     });
 }
