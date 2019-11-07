@@ -6,7 +6,7 @@ exports.run = (msg,client,Discord,color,arg1) => {
          let img=JSON.parse(JSON.stringify(res, null, '  '));
          const Pagination = require('discord-paginationembed');
          const embeds = [];
-         for (let i = 0; i < img.length; i++)
+         for (let i = 1; i < img.length; i++)
             embeds.push(new Discord.RichEmbed().setImage(img[i].url));
          new Pagination.Embeds()
               .setArray(embeds)
