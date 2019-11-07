@@ -31,8 +31,8 @@ exports.run = (msg,client,Discord,arg1) => {
               .setPage(1)
               .setTimeout(69000)
               .setNavigationEmojis({
-                  back: '⬅️',
-                  forward: '➡️',
+                  back: '◀️',
+                  forward: '▶️',
                   jump: '🔢',
                   delete: '🗑'
                })
