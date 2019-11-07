@@ -4,7 +4,6 @@
   "main": "index.js",
   "dependencies": {
     "discord.js": "^11.5.1",
-    "video-thumbnail-url": "^1.0.1",
     "urban": "^0.3.2",
     "yt-search": "^0.4.1",
     "dadjokes-wrapper": "^0.1.4",
