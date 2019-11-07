@@ -3,10 +3,11 @@ exports.run = (msg,client,Discord,arg1) => {
     const opts = {
       query: arg1,
       pageStart: 1, 
-      pageEnd: 3
+      pageEnd: 10
     };
     ytSearch(opts, function (err,r) {
        if (err) throw err;
+       console.log(r)
        const Pagination = require('discord-paginationembed');
          const embeds = [];
          for (let i = 0; i < r.videos.length; i++)
@@ -31,7 +32,6 @@ exports.run = (msg,client,Discord,arg1) => {
                   delete: '🗑'
                })
               .build();
-       console.log(r)
        const res = r.videos[Math.floor(Math.random()*(r.videos.length))]
        msg.channel.send(`https://www.youtube.com${res.url}`)
     });
