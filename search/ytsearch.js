@@ -28,7 +28,5 @@ exports.run = (msg,client,Discord,arg1) => {
                   delete: '🗑'
                })
               .build();
-       const res = r.videos[Math.floor(Math.random()*(r.videos.length))]
-       msg.channel.send(`https://www.youtube.com${res.url}`)
     });
 }
