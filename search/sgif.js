@@ -8,7 +8,8 @@ exports.run = (msg,client,Discord,color,arg1,gif_api) => {
       fmt: 'json'
     }, function (err, res) {
         if(err) return;
-        console.log(res)
+       // console.log(res)
+        console.log(res.data[0].images)
         let g=new Discord.RichEmbed()
            .setTitle(res.data.title).setURL(res.data.url)
            .setImage(res.data.image_url)
