@@ -12,7 +12,7 @@ exports.run = (msg,client,Discord,color,arg1,gif_api) => {
         console.log(res.data[0].images)
         let g=new Discord.RichEmbed()
            .setTitle(res.data[0].title).setURL(res.data[0].url)
-           .setImage(res.data[0].images.downsized_large.url)
+           .setImage(res.data[0].images.original_still.url)
            .setColor(color)
            .setTimestamp(new Date())
            .setFooter(`For ${msg.author.username}`,msg.author.avatarURL)
