@@ -21,6 +21,7 @@ exports.run = (msg,client,Discord,arg1) => {
               .setArray(embeds)
               .setAuthorizedUsers([msg.author.id])
               .setChannel(msg.channel)
+              .setFooter('Click on the blue title for video')
               .setPageIndicator(true)
               .setColor('#c4302b')
               .setPage(1)
