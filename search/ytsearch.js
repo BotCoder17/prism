@@ -1,5 +1,6 @@
 exports.run = (msg,client,Discord,arg1) => {
     const ytSearch = require('yt-search')
+    const getThumb = require('video-thumbnail-url')
     const opts = {
       query: arg1,
       pageStart: 1, 
@@ -7,12 +8,16 @@ exports.run = (msg,client,Discord,arg1) => {
     };
     ytSearch(opts, function (err,r) {
        if (err) throw err;
-       console.log(r.videos[0])
        const Pagination = require('discord-paginationembed');
-         const embeds = [];
+         const embeds = [];let vid='';
          for (let i = 1; i < r.videos.length; i++){
              let vd=r.videos[i];
+             getThumb(`https://www.youtube.com${vd.url}`)
+               .then(thumb_url => {
+                  vid=thumb_url;
+               }).catch(console.log);
              embeds.push(new Discord.RichEmbed()
+                         .setImage(vid)
                          .setTitle(vd.title).setURL(`https://www.youtube.com${vd.url}`)
                          .addField('Views',vd.views,true)
                          .addField('Posted',vd.ago,true));
