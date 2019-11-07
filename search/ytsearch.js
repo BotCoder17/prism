@@ -7,7 +7,7 @@ exports.run = (msg,client,Discord,arg1) => {
     };
     ytSearch(opts, function (err,r) {
        if (err) throw err;
-       console.log(r)
+       console.log(r.videos[0])
        const Pagination = require('discord-paginationembed');
          const embeds = [];
          for (let i = 0; i < r.videos.length; i++)
