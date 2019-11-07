@@ -14,7 +14,6 @@ exports.run = (msg,client,Discord,arg1) => {
              embeds.push(new Discord.RichEmbed()
                          .setImage(`http://img.youtube.com/vi/${r.videos[1].videoId}/hqdefault.jpg`)
                          .setTitle(vd.title).setURL(`https://www.youtube.com${vd.url}`)
-                         .addField('Duration',vd.timestamp)
                          .addField('Views',vd.views,true)
                          .addField('Posted',vd.ago,true));
          }
