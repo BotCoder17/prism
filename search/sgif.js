@@ -21,7 +21,6 @@ exports.run = (msg,client,Discord,color,arg1,gif_api) => {
               .setPageIndicator(true)
               .setColor(color)
               .setPage(1)
-              .setTitle(`Image search for ${arg1}`)
               .setTimeout(69000)
               .setNavigationEmojis({
                   back: '◀',
