@@ -1,6 +1,5 @@
 exports.run = (msg,client,Discord,arg1) => {
     const ytSearch = require('yt-search')
-    const getThumb = require('video-thumbnail-url')
     const opts = {
       query: arg1,
       pageStart: 1, 
@@ -13,8 +12,9 @@ exports.run = (msg,client,Discord,arg1) => {
          for (let i = 1; i < r.videos.length; i++){
              let vd=r.videos[i]
              embeds.push(new Discord.RichEmbed()
-                         .setImage(getThumb(`https://www.youtube.com${vd.url}`).then((tmb) => tmb))
+                         .setImage(`http://img.youtube.com/vi/${r.videos[1].videoId}/hqdefault.jpg`)
                          .setTitle(vd.title).setURL(`https://www.youtube.com${vd.url}`)
+                         .addField('Duration',vd.timestamp)
                          .addField('Views',vd.views,true)
                          .addField('Posted',vd.ago,true));
          }
