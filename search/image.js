@@ -1,6 +1,11 @@
 exports.run = (msg,client,Discord,color,arg1) => {
     const gis = require('g-i-s');
-    if(msg.channel.nsfw==true){
+     if(msg.channel.nsfw==false) { 
+        msg.channel.send('You can view results only in NSFW enabled channels')
+        .then(m => {
+            m.delete(10000)
+        }).catch(console.log)
+    }else{
        gis(arg1, (err, res) => {
          if(err) return;
          let img=JSON.parse(JSON.stringify(res, null, '  '));
@@ -25,7 +30,5 @@ exports.run = (msg,client,Discord,color,arg1) => {
                })
               .build();
         })
-    }else{
-        msg.channel.send(`You can view results only in NSFW enabled channels`);
     }
 }
