@@ -17,6 +17,12 @@ exports.run = (msg,client,Discord,color,arg1) => {
               .setPage(1)
               .setTitle(`Image search for ${arg1}`)
               .setTimeout(69000)
+              .setNavigationEmojis({
+                  back: '◀',
+                  forward: '▶',
+                  jump: '🔢',
+                  delete: '🗑'
+               })
               .build();
         })
     }else{
