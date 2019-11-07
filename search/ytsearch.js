@@ -3,7 +3,7 @@ exports.run = (msg,client,Discord,arg1) => {
     const opts = {
       query: arg1,
       pageStart: 1, 
-      pageEnd: 10
+      pageEnd: 2
     };
     ytSearch(opts, function (err,r) {
        if (err) throw err;
@@ -11,11 +11,7 @@ exports.run = (msg,client,Discord,arg1) => {
        const Pagination = require('discord-paginationembed');
          const embeds = [];
          for (let i = 0; i < r.videos.length; i++)
-         embeds.push(new Discord.RichEmbed()
-                     .setTitle(r.videos[i].title).setURL(`https://www.youtube.com${r.videos[i].url}`)
-                     .addField('Viewers',r.videos[i].views)
-                     .addField('Posted',r.videos[i].ago)
-                     .addField('Duration',r.videos[i].timestamp));
+         embeds.push(new Discord.RichEmbed().setTitle(r.videos[i].title).setURL(`https://www.youtube.com${r.videos[i].url}`).addField('Views',r.videos[i].views).addField('Posted',r.videos[i].ago).addField('Duration',r.videos[i].timestamp));
          new Pagination.Embeds()
               .setArray(embeds)
               .setAuthorizedUsers([msg.author.id])
