@@ -16,7 +16,7 @@ exports.run = (msg,client,Discord,arg1) => {
                          .setTitle(vd.title).setURL(`https://www.youtube.com${vd.url}`)
                          .addField('Views',vd.views)
                          .addField('Posted',vd.ago)
-                         .addField('Duration',vd.timestamp));
+                         .addField('Duration',vd.duration.timestamp));
          }
          new Pagination.Embeds()
               .setArray(embeds)
