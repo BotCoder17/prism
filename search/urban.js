@@ -1,5 +1,10 @@
 exports.run = (msg,Discord,client,color,arg1) => {
-    if(msg.channel.nsfw==false) return;
+    if(msg.channel.nsfw==false) { 
+        msg.channel.send('You can view results only in NSFW enabled channels')
+        .then(m => {
+            m.delete(10000)
+        }).catch(console.log)
+    }
     var urban = require('urban');
     urban(arg1).first(function(ub) {
          try{
