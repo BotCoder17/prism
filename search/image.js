@@ -1,16 +1,23 @@
 exports.run = (msg,client,Discord,color,arg1) => {
     const gis = require('g-i-s');
-    gis(arg1, (err, res) => {
-       if(err) return;
-       var ran = parseInt(Math.floor(Math.random()*res.length));
-     //  console.log(JSON.parse(JSON.stringify(res, null, '  ')));
-       let img=JSON.parse(JSON.stringify(res, null, '  '));
-        let im=new Discord.RichEmbed()
-        .setTitle(`Image search for ${arg1}`)
-        .setImage(img[ran].url)
-        .setTimestamp(new Date())
-        .setFooter(`Requested by ${msg.author.username}`,msg.author.avatarURL)
-        .setColor(color);
-        msg.channel.send(im)
-  })
+    if(msg.channel.nsfw==true){
+       gis(arg1, (err, res) => {
+         if(err) return;
+         let img=JSON.parse(JSON.stringify(res, null, '  '));
+         const Pagination = require('discord-paginationembed');
+         const embeds = [];
+         for (let i = 0; i < img.length; i++)
+            embeds.push(new Discord.RichEmbed().setImage(img[i].url));
+         new Pagination.Embeds()
+              .setArray(embeds)
+              .setAuthorizedUsers([msg.author.id])
+              .setChannel(msg.channel)
+              .setPageIndicator(true)
+              .setPage(1)
+              .setTitle(`Image search for ${arg1}`)
+              .build();
+        })
+    }else{
+        msg.channel.send(`You can view results only in NSFW enabled channels`);
+    }
 }
