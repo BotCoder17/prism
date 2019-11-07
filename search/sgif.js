@@ -9,7 +9,7 @@ exports.run = (msg,client,Discord,color,arg1,gif_api) => {
     }, function (err, res) {
         if(err) return;
       //  console.log(res)
-        console.log(res.data[0].images)
+      //  console.log(res.data[0].images)
         const Pagination = require('discord-paginationembed');
          const embeds = [];
          for (let i = 0; i < res.data.length; i++)
