@@ -12,7 +12,7 @@ exports.run = (msg,client,Discord,arg1) => {
          for (let i = 1; i < r.videos.length; i++){
              let vd=r.videos[i]
              embeds.push(new Discord.RichEmbed()
-                         .setImage(`http://img.youtube.com/vi/${r.videos[1].videoId}/hqdefault.jpg`)
+                         .setImage(`http://img.youtube.com/vi/${vd.videoId}/hqdefault.jpg`)
                          .setTitle(vd.title).setURL(`https://www.youtube.com${vd.url}`)
                          .addField('Views',vd.views,true)
                          .addField('Posted',vd.ago,true));
