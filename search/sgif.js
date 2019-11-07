@@ -9,11 +9,11 @@ exports.run = (msg,client,Discord,color,arg1,gif_api) => {
     }, function (err, res) {
         if(err) return;
       //  console.log(res)
-        console.log(res.data[0].images)
+      //  console.log(res.data[0].images)
         const Pagination = require('discord-paginationembed');
          const embeds = [];
          for (let i = 0; i < res.data.length; i++)
-            embeds.push(new Discord.RichEmbed().setImage(res.data[i].images.original_still).setTitle(res.data[i].title).setURL(res.data[i].url));
+            embeds.push(new Discord.RichEmbed().setImage(res.data[i].images.original_still.url).setTitle(res.data[i].title).setURL(res.data[i].url));
          new Pagination.Embeds()
               .setArray(embeds)
               .setAuthorizedUsers([msg.author.id])
