@@ -7,6 +7,7 @@ exports.run = (msg,client,Discord,color,arg1,gif_api) => {
       fmt: 'json'
     }, function (err, res) {
         if(err) return;
+        console.log(res)
         let g=new Discord.RichEmbed()
            .setTitle(`GIF search for ${arg1}`)
            .setImage(res.data.image_url)
