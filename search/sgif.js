@@ -2,8 +2,8 @@ exports.run = (msg,client,Discord,color,arg1,gif_api) => {
     var giphy = require('giphy-api')({
        apiKey : gif_api
     });
-    giphy.random({
-      tag: arg1,
+    giphy.search({
+      q: arg1,
       limit: 100,
       fmt: 'json'
     }, function (err, res) {
