@@ -9,7 +9,7 @@ exports.run = (msg,client,Discord,color,arg1,gif_api) => {
         if(err) return;
         console.log(res)
         let g=new Discord.RichEmbed()
-           .setTitle(`GIF search for ${arg1}`)
+           .setTitle(res.data.type.title).setURL(res.data.type.url)
            .setImage(res.data.image_url)
            .setColor(color)
            .setTimestamp(new Date())
