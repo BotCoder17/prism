@@ -13,6 +13,7 @@ exports.run = (msg,client,Discord,color,arg1) => {
               .setAuthorizedUsers([msg.author.id])
               .setChannel(msg.channel)
               .setPageIndicator(true)
+              .setColor(color)
               .setPage(1)
               .setTitle(`Image search for ${arg1}`)
               .build();
