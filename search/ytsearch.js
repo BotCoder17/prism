@@ -15,7 +15,6 @@ exports.run = (msg,client,Discord,arg1) => {
              getThumb(`https://www.youtube.com${vd.url}`)
                .then(thumb_url => {
                   vid=thumb_url;
-               }).catch(console.log);
              embeds.push(new Discord.RichEmbed()
                          .setImage(vid)
                          .setTitle(vd.title).setURL(`https://www.youtube.com${vd.url}`)
@@ -37,5 +36,6 @@ exports.run = (msg,client,Discord,arg1) => {
                   delete: '🗑'
                })
               .build();
+         }).catch(console.log);
     });
 }
