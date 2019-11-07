@@ -10,8 +10,14 @@ exports.run = (msg,client,Discord,arg1) => {
        console.log(r.videos[0])
        const Pagination = require('discord-paginationembed');
          const embeds = [];
-         for (let i = 0; i < r.videos.length; i++)
-         embeds.push(new Discord.RichEmbed().setTitle(r.videos[i].title).setURL(`https://www.youtube.com${r.videos[i].url}`).addField('Views',r.videos[i].views).addField('Posted',r.videos[i].ago).addField('Duration',r.videos[i].timestamp));
+         for (let i = 0; i < r.videos.length; i++){
+             let vd=r.videos[i];
+             embeds.push(new Discord.RichEmbed()
+                         .setTitle(vd.title).setURL(`https://www.youtube.com${vd.url}`)
+                         .addField('Views',vd.views)
+                         .addField('Posted',vd.ago)
+                         .addField('Duration',vd.timestamp));
+         }
          new Pagination.Embeds()
               .setArray(embeds)
               .setAuthorizedUsers([msg.author.id])
