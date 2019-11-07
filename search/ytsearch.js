@@ -20,7 +20,8 @@ exports.run = (msg,client,Discord,arg1) => {
                          .setTitle(vd.title).setURL(`https://www.youtube.com${vd.url}`)
                          .addField('Views',vd.views,true)
                          .addField('Posted',vd.ago,true));
-         }
+         }).catch(console.log);
+     }
          new Pagination.Embeds()
               .setArray(embeds)
               .setAuthorizedUsers([msg.author.id])
@@ -36,6 +37,5 @@ exports.run = (msg,client,Discord,arg1) => {
                   delete: '🗑'
                })
               .build();
-         }).catch(console.log);
     });
 }
