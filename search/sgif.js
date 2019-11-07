@@ -8,11 +8,11 @@ exports.run = (msg,client,Discord,color,arg1,gif_api) => {
       fmt: 'json'
     }, function (err, res) {
         if(err) return;
-       // console.log(res)
-        console.log(res.data[0].images)
+        console.log(res)
+       // console.log(res.data[0].images)
         let g=new Discord.RichEmbed()
-           .setTitle(res.data.title).setURL(res.data.url)
-           .setImage(res.data.image_url)
+           .setTitle(res.data[0].title).setURL(res.data[0].url)
+           .setImage(res.data[0].images.downsized_large.url)
            .setColor(color)
            .setTimestamp(new Date())
            .setFooter(`For ${msg.author.username}`,msg.author.avatarURL)
