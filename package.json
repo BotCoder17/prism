@@ -8,6 +8,7 @@
     "yt-search": "^0.4.1",
     "dadjokes-wrapper": "^0.1.4",
     "meme-search": "^1.0.5",
+    "discord-paginationembed":"^1.0.2",
     "xkcd": "^1.1.3",
     "aztro-js": "^0.1.5",
     "giphy-api": "^2.0.1",
