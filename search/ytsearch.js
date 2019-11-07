@@ -3,14 +3,14 @@ exports.run = (msg,client,Discord,arg1) => {
     const opts = {
       query: arg1,
       pageStart: 1, 
-      pageEnd: 2
+      pageEnd: 10
     };
     ytSearch(opts, function (err,r) {
        if (err) throw err;
        console.log(r.videos[0])
        const Pagination = require('discord-paginationembed');
          const embeds = [];
-         for (let i = 0; i < r.videos.length; i++){
+         for (let i = 1; i < r.videos.length; i++){
              let vd=r.videos[i];
              embeds.push(new Discord.RichEmbed()
                          .setTitle(vd.title).setURL(`https://www.youtube.com${vd.url}`)
