@@ -4,7 +4,7 @@ exports.run = (msg,Discord,client,color,arg1) => {
         .then(m => {
             m.delete(10000)
         }).catch(console.log)
-    }
+    }else{
     var urban = require('urban');
     urban(arg1).first(function(ub) {
          try{
@@ -38,4 +38,5 @@ exports.run = (msg,Discord,client,color,arg1) => {
              console.log(err)
           }
       });
+    }
 }
