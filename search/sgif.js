@@ -4,7 +4,7 @@ exports.run = (msg,client,Discord,color,arg1,gif_api) => {
     });
     giphy.search({
       q: arg1,
-      limit: 100,
+      limit: 10,
       fmt: 'json'
     }, function (err, res) {
         if(err) return;
