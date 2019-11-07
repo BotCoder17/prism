@@ -4,12 +4,12 @@ exports.run = (msg,client,Discord,color,arg1,gif_api) => {
     });
     giphy.search({
       q: arg1,
-      limit: 10,
+      limit: 100,
       fmt: 'json'
     }, function (err, res) {
         if(err) return;
       //  console.log(res)
-      //  console.log(res.data[0].images)
+        console.log(res.data[0].images)
         const Pagination = require('discord-paginationembed');
          const embeds = [];
          for (let i = 0; i < res.data.length; i++)
