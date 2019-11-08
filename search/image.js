@@ -35,6 +35,7 @@ exports.run = (msg,client,Discord,color,arg1) => {
                   .then(m =>{
                        m.delete(10000)
                }).catch(console.log)
+            }
         })
     }
 }
