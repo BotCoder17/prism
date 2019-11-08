@@ -7,6 +7,7 @@ exports.run = (msg,client,Discord,arg1) => {
     };
     ytSearch(opts, function (err,r) {
        if (err) throw err;
+     try{
        const Pagination = require('discord-paginationembed');
          const embeds = [];
          for (let i = 1; i < r.videos.length; i++){
@@ -33,5 +34,11 @@ exports.run = (msg,client,Discord,arg1) => {
                   delete: '🗑'
                })
               .build();
+          }catch(err){
+             msg.channel.send('I must have the `MANAGE MESSAGE` permission enabled if you want me to send result')
+               .then(m => {
+                  m.delete(10000)
+               }).catch(console.log);
+          }
     });
 }
