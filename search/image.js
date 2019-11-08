@@ -7,9 +7,8 @@ exports.run = (msg,client,Discord,color,arg1) => {
         }).catch(console.log)
     }else{
        gis(arg1, (err, res) => {
-         if(err) return;
+        try{
          let img=JSON.parse(JSON.stringify(res, null, '  '));
-      try{
          const Pagination = require('discord-paginationembed');
          const embeds = [];
          for (let i = 0; i < img.length; i++)
