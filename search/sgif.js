@@ -7,7 +7,12 @@ exports.run = (msg,client,Discord,color,arg1,gif_api) => {
       limit: 100,
       fmt: 'json'
     }, function (err, res) {
-        if(err) return;
+        if(err) {
+          msg.channel.send('I must have the `MANAGE MESSAGE` permission enabled if you want me to send result')
+               .then(m => {
+                  m.delete(10000)
+               }).catch(console.log);
+        }
       //  console.log(res)
       //  console.log(res.data[0].images)
         const Pagination = require('discord-paginationembed');
