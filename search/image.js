@@ -9,6 +9,7 @@ exports.run = (msg,client,Discord,color,arg1) => {
        gis(arg1, (err, res) => {
          if(err) return;
          let img=JSON.parse(JSON.stringify(res, null, '  '));
+      try{
          const Pagination = require('discord-paginationembed');
          const embeds = [];
          for (let i = 0; i < img.length; i++)
@@ -29,6 +30,11 @@ exports.run = (msg,client,Discord,color,arg1) => {
                   delete: '🗑'
                })
               .build();
+            }catch(err){
+               msg.channel.send('I must have the `MANAGE MESSAGE` permission enabled if you want me to send result')
+                  .then(m =>{
+                       m.delete(10000)
+               }).catch(console.log)
         })
     }
 }
