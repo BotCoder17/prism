@@ -14,9 +14,8 @@ exports.run = (msg,client,Discord,arg1) => {
              let vd=r.videos[i]
              embeds.push(new Discord.RichEmbed()
                          .setImage(`http://img.youtube.com/vi/${vd.videoId}/hqdefault.jpg`)
-                         .setTitle(vd.title).setURL(`https://www.youtube.com${vd.url}`)
-                         .addField('Views',vd.views,true)
-                         .addField('Posted',vd.ago,true));
+                         .setTitle(vd.title)
+                         .setURL(`https://www.youtube.com${vd.url}`));
          }
          new Pagination.Embeds()
               .setArray(embeds)
