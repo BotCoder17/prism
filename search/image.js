@@ -7,7 +7,7 @@ exports.run = (msg,client,Discord,color,arg1) => {
         }).catch(console.log)
     }else{
        gis(arg1, (err, res) => {
-        try{
+        if(msg.channel.permissionsFor('577148201430417409').has("MANAGE_MESSAGES")==true){
          let img=JSON.parse(JSON.stringify(res, null, '  '));
          const Pagination = require('discord-paginationembed');
          const embeds = [];
@@ -29,7 +29,7 @@ exports.run = (msg,client,Discord,color,arg1) => {
                   delete: '🗑'
                })
               .build();
-            }catch(err){
+            }else{
                msg.channel.send('I must have the `MANAGE MESSAGE` permission enabled if you want me to send result')
                   .then(m =>{
                        m.delete(10000)
