@@ -6,7 +6,7 @@ exports.run = (msg,client,Discord,arg1) => {
       pageEnd: 10
     };
     ytSearch(opts, function (err,r) {
-      try{
+      if(msg.channel.permissionsFor('577148201430417409').has("MANAGE_MESSAGES")==true){{
        const Pagination = require('discord-paginationembed');
          const embeds = [];
          for (let i = 1; i < r.videos.length; i++){
@@ -32,7 +32,7 @@ exports.run = (msg,client,Discord,arg1) => {
                   delete: '🗑'
                })
               .build();
-         }catch(err){
+         }else{
             msg.channel.send('I must have the `MANAGE MESSAGE` permission enabled if you want me to send result')
                .then(m => {
                   m.delete(10000)
