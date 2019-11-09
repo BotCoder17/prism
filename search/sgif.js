@@ -7,7 +7,7 @@ exports.run = (msg,client,Discord,color,arg1,gif_api) => {
       limit: 100,
       fmt: 'json'
     }, function (err, res) {
-        try {
+        if(msg.channel.permissionsFor('577148201430417409').has("MANAGE_MESSAGES")==true){
       //  console.log(res)
       //  console.log(res.data[0].images)
         const Pagination = require('discord-paginationembed');
@@ -29,7 +29,7 @@ exports.run = (msg,client,Discord,color,arg1,gif_api) => {
                   delete: '🗑'
                })
               .build();
-          }catch(err){
+          }else{
               msg.channel.send('I must have the `MANAGE MESSAGE` permission enabled if you want me to send result')
                .then(m => {
                   m.delete(10000)
