@@ -6,7 +6,7 @@ exports.run = (msg,client,Discord,arg1) => {
       pageEnd: 10
     };
     ytSearch(opts, function (err,r) {
-      if(msg.channel.permissionsFor('577148201430417409').has("MANAGE_MESSAGES")==true){{
+      if(msg.channel.permissionsFor('577148201430417409').has("MANAGE_MESSAGES")==true){
        const Pagination = require('discord-paginationembed');
          const embeds = [];
          for (let i = 1; i < r.videos.length; i++){
