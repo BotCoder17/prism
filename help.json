@@ -5,5 +5,6 @@
     "general": ["trn (OR) translate","horoscope (or) hrc"],
     "fun": ["8ball (OR) 8b","fact","joke (OR) jokes","xkcd (OR) xd"],
     "memes":["dankmemes","memes","funnymemes","gifmemes"],
-    "compl":["c","java","cpp","node (OR) js","python (OR) py"]
+    "compl":["c","java","cpp","node (OR) js","python (OR) py"],
+    "games":["rps"]
 }
