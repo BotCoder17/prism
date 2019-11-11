@@ -20,7 +20,7 @@ exports.run = (msg,client,Discord,color,arg1) => {
             .setDescription(`**${msg.author.username}** : \`${ps}\`\n**${client.user.username}** : \`${rps}\``)
             .addField("Result",res)
             .setTitle(`Playing rock, paper, scissor with ${msg.author.username}`)
-           
+            .setColor(color)
            msg.channel.send(pr)
         }
       }else{ //play with user
@@ -42,7 +42,7 @@ exports.run = (msg,client,Discord,color,arg1) => {
                 .setDescription(`**${msg.author.username}** : \`${ps}\`\n**${client.users.get(usr).username}** : \`${rps}\``)
                 .addField("Result",res)
                 .setTitle(`Playing rock, paper, scissor with ${client.users.get(usr).username}`)
-           
+                .setColor(color)
                 msg.channel.send(pr)
            }
         }catch(err){}
