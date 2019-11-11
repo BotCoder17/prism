@@ -16,6 +16,10 @@ exports.run = (msg,client,Discord,pf,color,arg0,arg01,arg1,cmd,pf2,ownerID,gif_a
             let ping=require('./utility/ping.js');
             ping.run(Discord,client,msg);
         break;
+        case 'rps':
+            let rps=require('./games/rps.js');
+            rps.run(msg,client,Discord,color,arg1);
+        break;
         case 'stat':case 'stats':case 'statistic':case 'statistics':
             let stat=require('./owner/statistics.js');
             stat.run(msg,client,Discord,color,ownerID);
