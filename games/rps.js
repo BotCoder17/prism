@@ -19,7 +19,7 @@ exports.run = (msg,client,Discord,color,arg1) => {
             .setDescription(`**${msg.author.username}** : \`${ps}\`\n**${client.user.username}** : \`${rps}\``)
             .addField("Result",res)
             .setTitle(`Playing rock, paper, scissor with ${msg.author.username}`)
-           
+            .setColor(color)
            msg.channel.send(pr)
         }
       }else{ //play with user
@@ -39,12 +39,11 @@ exports.run = (msg,client,Discord,color,arg1) => {
            ((ps=="rock"&&rps=="scissor")||(ps=="paper"&&rps=="rock")||(ps=="scissor"&&rps=="paper"))?"Congo! u win **"+(msg.author.username)+"**":
            ((ps=="scissor"&&rps=="rock")||(ps=="rock"&&rps=="paper")||(ps=="paper"&&rps=="scissor"))?"**"+(u.username)+"** wins !":"";
            if(res!=""){
-             
               let pr=new Discord.RichEmbed()
                 .setDescription(`**${msg.author.username}** : \`${ps}\`\n**${u.username}** : \`${rps}\``)
                 .addField("Result",res)
                 .setTitle(`Playing rock, paper, scissor with ${u.username}`)
-           
+                .setColor(color)
                 msg.channel.send(pr)
                  }
           }).catch(console.log)
