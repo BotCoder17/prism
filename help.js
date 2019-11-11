@@ -1,6 +1,6 @@
 exports.run = (msg,client,Discord,cmd,color,arg1) => {
       let help=require('./help.json');
-      let rct="",utl="",sr="",trn="",fn="",mem="",cmp="";
+      let rct="",utl="",sr="",trn="",fn="",mem="",cmp="",gms="";
       for(var i=0;i<help.react.length;i++){
              rct+=(i<(help.react.length-1))?`\`${help.react[i]}\`  |  `:`\`${help.react[i]}\``;
       }
@@ -22,11 +22,15 @@ exports.run = (msg,client,Discord,cmd,color,arg1) => {
       for(var i=0;i<help.memes.length;i++){
              mem+=(i<(help.memes.length-1))?`\`${help.memes[i]}\`  |  `:`\`${help.memes[i]}\``;
       }
+      for(var i=0;i<help.games.length;i++){
+             gms+=(i<(help.games.length-1))?`\`${help.games[i]}\`  |  `:`\`${help.games[i]}\``;
+      }
       let em=new Discord.RichEmbed()
       .setTitle('Help Box')
       .addField('General',trn)
       .addField('Compile codes',cmp)
       .addField('React',rct)
+      .addField('Games',gms)
       .addField('Search stuffs',sr)
       .addField('Fun',fn)
       .addField('Memes',mem)
