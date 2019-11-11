@@ -12,8 +12,8 @@ exports.run = (msg,client,Discord,color,arg1) => {
       if(b==null||b==''){ //play with bot
          let res="",ps=a.toLowerCase()
          res=((ps=="rock"&&rps=="rock")||(ps=="paper"&&rps=="paper")||(ps=="scissor"&&rps=="scissor"))?"It\'s a draw!":
-         ((ps=="rock"&&rps=="scissor")||(ps=="paper"&&rps=="rock")||(ps=="scissor"&&rps=="paper"))?"Congo! u win "+(msg.author.username):
-         ((ps=="scissor"&&rps=="rock")||(ps=="rock"&&rps=="paper")||(ps=="paper"&&rps=="scissor"))?(client.user.username)+" wins !":"";
+         ((ps=="rock"&&rps=="scissor")||(ps=="paper"&&rps=="rock")||(ps=="scissor"&&rps=="paper"))?"Congo! u win **"+(msg.author.username)+"**":
+         ((ps=="scissor"&&rps=="rock")||(ps=="rock"&&rps=="paper")||(ps=="paper"&&rps=="scissor"))?"**"+(client.user.username)+"** wins !":"";
         if(res!=""){
            let pr=new Discord.RichEmbed()
             .setDescription(`**${msg.author.username}** : \`${ps}\`\n**${client.user.username}** : \`${rps}\``)
