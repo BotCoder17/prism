@@ -6,7 +6,7 @@ exports.run = (msg,Discord,cmd,arg1) => {
            let v = c.runSource(sourcecode);
            v.then(res => {
                 let cnk='',sdh=res.stdout;
-                for(var i=0;i<sdh.length-1;i++){
+                for(var i=0;i<sdh.length;i++){
                    cnk+=sdh.charAt(i);
                 }
                 if((res.stderr=='')&&(cnk!=process.env.TOKEN)){    //no error
