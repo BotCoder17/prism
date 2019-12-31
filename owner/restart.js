@@ -3,7 +3,7 @@ exports.run = (msg,client,Discord,color,pf,ownerID) => {
       // var t=new Date(client. readyAt).toGMTString().split(' ');
         var t=new Date().toGMTString().split(' ');
        var s=t[4].split(':');
-       var h=parseInt(s[0]),m=parseInt(s[1]),h1=0,tp='am';
+       var h=parseInt(s[0]),m=parseInt(s[1]),h1=0,tp='';
        h+=5;m+=30;
        if(m>59){
           m-=60;
