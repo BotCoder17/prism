@@ -12,12 +12,10 @@ exports.run = (msg,client,Discord,color,pf,ownerID) => {
        if(m<10) m='0'+m;
        // console.log(h+':'+m) // 24 hrs
        if(h>11) tp='pm';
-       if(h>12){
-          h1=h-12;
-       } else {
-           h1=h;
-           tp='am';
-       }
+       else tp='am';
+        
+       if(h>12) h1=h-12;
+       else h1=h;
        // console.log(h1+':'+m+' '+tp) // 12 hrs
        msg.channel.send(`Resetting... **${client.user.tag}**`)
          .then(client.destroy())
