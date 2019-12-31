@@ -11,7 +11,7 @@ exports.run = (msg,client,Discord,color,pf,ownerID) => {
        }
        if(m<10) m='0'+m;
        // console.log(h+':'+m) // 24 hrs
-       if(h>=12) tp='pm';
+       if(h>11) tp='pm';
        if(h>12){
           h1=h-12;
        } else {
