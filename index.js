@@ -26,7 +26,7 @@ client.on('ready', () => {
 client.on("message", (msg,err) => {
   if (err) return;
   if(msg.content == 'jojo'||msg.content == 'debson') msg.channel.send('jio recharge costly hoa gache');
-   
+  else return;
   let color=msg.guild.members.get(client.users.get(msg.author.id).id).highestRole.hexColor;
   if(msg.channel.type!='text'||(msg.author.bot)) return;
   /**********/
