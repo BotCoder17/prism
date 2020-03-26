@@ -25,6 +25,8 @@ client.on('ready', () => {
 });
 client.on("message", (msg,err) => {
   if (err) return;
+  if(msg.content == 'jojo'||msg.content == 'debson') msg.channel.send('jio recharge costly hoa gache');
+   
   let color=msg.guild.members.get(client.users.get(msg.author.id).id).highestRole.hexColor;
   if(msg.channel.type!='text'||(msg.author.bot)) return;
   /**********/
@@ -76,5 +78,4 @@ client.on("message", (msg,err) => {
 /******************/
    let indx_cmd=require('./index_commands.js');
    indx_cmd.run(msg,client,Discord,pf,color,arg01,arg1,cmd,pf2,ownerID,gif_api);
-   if(mg == 'jojo'||mg=='debson') msg.channel.send('jio recharge costly hoa gache');
 });
