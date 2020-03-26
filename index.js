@@ -75,6 +75,6 @@ client.on("message", (msg,err) => {
      arg1=arg1.trim(); // text (no mentions)
 /******************/
    let indx_cmd=require('./index_commands.js');
-   indx_cmd.run(msg,client,Discord,pf,color,arg0,arg01,arg1,cmd,pf2,ownerID,gif_api);
-   if(mg == 'jojo'||mg=='debson') msg.reply('jio recharge costly hoa gache');
+   indx_cmd.run(msg,client,Discord,pf,color,arg01,arg1,cmd,pf2,ownerID,gif_api);
+   if(mg == 'jojo'||mg=='debson') msg.channel.send('jio recharge costly hoa gache');
 });
