@@ -73,8 +73,6 @@ client.on("message", (msg,err) => {
      arg01=arg01.trim(); // user mention
      arg1=arg1.trim(); // text (no mentions)
 /******************/
-   if(pf2 == pf){
      let indx_cmd=require('./index_commands.js');
      indx_cmd.run(msg,client,Discord,pf,color,arg01,arg1,cmd,pf2,ownerID,gif_api);
-   }
 });
