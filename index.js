@@ -11,7 +11,7 @@ app.get("/", (request, response) => {
 app.listen(process.env.PORT);
 setInterval(() => {
   http.get(`http://${process.env.PROJECT_DOMAIN}.glitch.me/`);
-}, 280000);
+}, 900000);
 
 client.login(process.env.TOKEN);
 const ownerID=process.env.OWNERID;
