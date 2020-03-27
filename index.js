@@ -24,7 +24,8 @@ client.on('ready', () => {
 });
 client.on("message", (msg,err) => {
   if (err) return;
-  let color=msg.guild.members.get(msg.author.id).highestRole.hexColor;
+  let color='#'+Math.floor(Math.random()*16777215).toString(16);
+  //let color=msg.guild.members.get(client.users.get(msg.author.id).id).highestRole.hexColor;
   if(msg.channel.type!='text'||(msg.author.bot)) return;
   /**********/
   let mg=msg.content, ln=pf.length;
