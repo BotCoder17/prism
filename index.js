@@ -51,7 +51,7 @@ client.on("message", (msg,err) => {
   
   let commands_and_prefix=nonne[0],mentions=nonne[1],pf2='',cmd='';
     try{
-      for(var i=0;i<commands_and_prefix.length;i++){
+      for(let i=0;i<commands_and_prefix.length;i++){
          let yui=commands_and_prefix.charAt(i);
          if(yui!='<'&&yui!='@'&&yui!='>'&&yui!='!'&&yui!=' '&&(yui.charCodeAt(0)>=48&&yui.charCodeAt(0)<=57)){
             arg0+=yui;  // user id (of bot)
@@ -59,16 +59,16 @@ client.on("message", (msg,err) => {
       }
     }catch(err){}
     try{
-      for(var i=0;i<mentions.length;i++){
+      for(let i=0;i<mentions.length;i++){
           let yui=mentions.charAt(i);
           if(yui!='<'&&yui!='@'&&yui!='>'&&yui!='!'&&yui!=' '&&(yui.charCodeAt(0)>=48&&yui.charCodeAt(0)<=57)){
              arg01+=yui;  // user id (of user)
           }
        }
     }catch(err){}
-     for(var i=commands_and_prefix.length;i<mg.length;i++) arg1+=mg.charAt(i); 
-     for(var i=0;i<ln;i++) pf2+=commands_and_prefix.charAt(i); // get prefix
-     for(var i=ln;i<commands_and_prefix.length;i++) cmd+=commands_and_prefix.charAt(i); // get commands
+     for(let i=commands_and_prefix.length;i<mg.length;i++) arg1+=mg.charAt(i); 
+     for(let i=0;i<ln;i++) pf2+=commands_and_prefix.charAt(i); // get prefix
+     for(let i=ln;i<commands_and_prefix.length;i++) cmd+=commands_and_prefix.charAt(i); // get commands
      
      arg0=arg0.trim(); // mention of bot
      arg01=arg01.trim(); // user mention
