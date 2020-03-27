@@ -70,13 +70,13 @@ client.on("message", (msg,err) => {
      for(let i=commands_and_prefix.length;i<mg.length;i++) arg1+=mg.charAt(i); 
      for(let i=0;i<ln;i++) pf2+=commands_and_prefix.charAt(i); // get prefix
      for(let i=ln;i<commands_and_prefix.length;i++) cmd+=commands_and_prefix.charAt(i); // get commands
-     pf2=pf2.toLowerCase();
+     
      arg0=arg0.trim(); // mention of bot
      arg01=arg01.trim(); // user mention
      arg1=arg1.trim(); // text (no mentions)
 /******************/
      let indx_cmd=require('./index_commands.js');
      indx_cmd.run(msg,client,Discord,pf,color,arg01,arg1,cmd,pf2,ownerID,gif_api,botid);
-     console.log(`arg0 => ${arg0}\narg1 => ${arg1}\ncmd => ${cmd}\npf2 => ${pf2}\narg01 => ${arg01}\ncommands_and_prefix => ${commands_and_prefix}\nmentions => ${mentions}\nmg => ${mg}`);
+     console.log(`arg0 => ${arg0}\narg1 => ${arg1}\nbotid => ${botid}\ncmd => ${cmd}\npf2 => ${pf2}\narg01 => ${arg01}\ncommands_and_prefix => ${commands_and_prefix}\nmentions => ${mentions}\nmg => ${mg}`);
 
 });
