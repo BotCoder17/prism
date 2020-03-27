@@ -1,4 +1,4 @@
-exports.run = (msg,client,Discord,pf,color,arg0,arg01,arg1,cmd,pf2,ownerID,gif_api) => {
+exports.run = (msg,client,Discord,pf,color,arg0,arg01,arg1,cmd,pf2,ownerID,gif_api,botid) => {
   if(arg0==botid) {
       let btin=require('./btinfo.js');  // bot info
       btin.run(msg,client,Discord,color,pf,arg0);
