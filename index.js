@@ -15,9 +15,9 @@ setInterval(() => {
 }, 280000);
 
 client.login(process.env.TOKEN);
-var ownerID=process.env.OWNERID;
-var pf=process.env.PREFIX;
-var gif_api=process.env.GIF_API;
+const ownerID=process.env.OWNERID;
+const pf=process.env.PREFIX;
+const gif_api=process.env.GIF_API;
 client.on('ready', () => {
    console.log(`${client.user.tag} is ready for chocolates😋🍫!`);
    let cm=require('./rdy.js');
@@ -25,7 +25,6 @@ client.on('ready', () => {
 });
 client.on("message", (msg,err) => {
   if (err) return;
-
   let color=msg.guild.members.get(client.users.get(msg.author.id).id).highestRole.hexColor;
   if(msg.channel.type!='text'||(msg.author.bot)) return;
   /**********/
@@ -58,7 +57,7 @@ client.on("message", (msg,err) => {
             arg0+=yui;  // user id (of bot)
          }
       }
-    }catch(err){};    
+    }catch(err){}
     try{
       for(var i=0;i<mentions.length;i++){
           let yui=mentions.charAt(i);
@@ -66,7 +65,7 @@ client.on("message", (msg,err) => {
              arg01+=yui;  // user id (of user)
           }
        }
-    }catch(err){};
+    }catch(err){}
      for(var i=commands_and_prefix.length;i<mg.length;i++) arg1+=mg.charAt(i); 
      for(var i=0;i<ln;i++) pf2+=commands_and_prefix.charAt(i); // get prefix
      for(var i=ln;i<commands_and_prefix.length;i++) cmd+=commands_and_prefix.charAt(i); // get commands
