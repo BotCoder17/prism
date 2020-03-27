@@ -15,6 +15,7 @@ setInterval(() => {
 
 client.login(process.env.TOKEN);
 const ownerID=process.env.OWNERID;
+const botid=process.env.BOTID;
 const pf=process.env.PREFIX;
 const gif_api=process.env.GIF_API;
 client.on('ready', () => {
@@ -75,7 +76,7 @@ client.on("message", (msg,err) => {
      arg1=arg1.trim(); // text (no mentions)
 /******************/
      let indx_cmd=require('./index_commands.js');
-     indx_cmd.run(msg,client,Discord,pf,color,arg01,arg1,cmd,pf2,ownerID,gif_api);
+     indx_cmd.run(msg,client,Discord,pf,color,arg01,arg1,cmd,pf2,ownerID,gif_api,botid);
      console.log(`arg0 => ${arg0}\narg1 => ${arg1}\ncmd => ${cmd}\npf2 => ${pf2}\narg01 => ${arg01}\ncommands_and_prefix => ${commands_and_prefix}\nmentions => ${mentions}\nmg => ${mg}`);
 
 });
