@@ -3,7 +3,7 @@
   "version": "1.7.5",
   "main": "index.js",
   "dependencies": {
-    "discord.js": "^12.1.1",
+    "discord.js": "^11.5.1",
     "urban": "^0.3.2",
     "yt-search": "^1.1.2",
     "dadjokes-wrapper": "^0.1.4",
@@ -33,15 +33,13 @@
     "howler": "^2.1.3",
     "node-opus": "^0.3.2",
     "opusscript": "^0.0.6",
+    "request": "^2.88.2",
     "util": "^0.12.1",
     "sodium": "^3.0.2",
     "@discordjs/opus": "^0.1.0",
     "bufferutil": "^4.0.1",
     "erlpack": "^0.1.3",
-    "ws": "^7.2.3",
-    "utf-8-validate": "^5.0.2",
-    "libsodium-wrappers": "^0.7.5",
-    "zlib-sync": "^0.1.6"
+    "utf-8-validate": "^5.0.2"
   },
   "engines": {
     "node": "v10.15.3"
@@ -54,15 +52,15 @@
     "canvas": "^2.5.0",
     "ffmpeg-static": "^2.4.0",
     "json-filter-loader": "^1.0.0",
-    "webpack": "^4.x.x",
+    "webpack": "^5.0.0-beta.1",
     "webpack-cli": "^4.0.0-alpha-5"
   },
   "peerDependencies": {
     "@discordjs/uws": "^11.149.1",
-    "libsodium-wrappers": "^0.7.3",
+    "libsodium-wrappers": "^0.7.6",
     "sodium": "^3.0.2",
     "bufferutil": "^4.0.1",
-    "zlib-sync": "^0.1.5",
+    "zlib-sync": "^0.1.6",
     "zucc": "^0.2.0-b"
   },
   "scripts": {
