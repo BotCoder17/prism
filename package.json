@@ -31,7 +31,7 @@
     "tweetnacl": "^1.0.2",
     "express": "^4.17.1",
     "howler": "^2.1.3",
-    "node-opus": "^0.2.7",
+    "node-opus": "^0.3.1",
     "opusscript": "^0.0.6",
     "util": "^0.12.1",
     "sodium": "^2.0.3",
@@ -39,7 +39,9 @@
     "bufferutil": "^4.0.1",
     "erlpack": "^0.1.3",
     "utf-8-validate": "^5.0.2",
-    "@discordjs/uws": "^10.149.0"
+    "@discordjs/uws": "^10.149.0",
+    "libsodium-wrappers": "^0.7.3",
+    "erlpack": "discordapp/erlpack"
   },
   "engines": {
     "node": "v10.15.3"
@@ -57,7 +59,6 @@
   },
   "peerDependencies": {
     "@discordjs/uws": "^11.149.1",
-    "libsodium-wrappers": "^0.7.3",
     "sodium": "^3.0.2",
     "bufferutil": "^4.0.1",
     "zlib-sync": "^0.1.6",
