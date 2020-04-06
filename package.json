@@ -40,7 +40,7 @@
     "libsodium-wrappers": "^0.7.3"
   },
   "engines": {
-    "node": "v8.x"
+    "node": "v10.x"
   },
   "scripts": {
     "start": "node bot.js"
