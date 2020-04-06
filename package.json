@@ -22,7 +22,6 @@
     "node-weeb": "^1.0.4",
     "node-google-translate-skidz": "^1.1.2",
     "compile-run": "^2.3.2",
-    "@discordjs/collection": "^0.1.5",
     "abort-controller": "^3.0.0",
     "form-data": "^3.0.0",
     "node-fetch": "^2.6.0",
@@ -36,7 +35,6 @@
     "opusscript": "^0.0.6",
     "util": "^0.12.1",
     "sodium": "^2.0.3",
-    "@discordjs/opus": "^0.1.0",
     "bufferutil": "^4.0.1",
     "utf-8-validate": "^5.0.2",
     "libsodium-wrappers": "^0.7.3"
