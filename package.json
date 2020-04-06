@@ -37,28 +37,11 @@
     "sodium": "^2.0.3",
     "@discordjs/opus": "^0.1.0",
     "bufferutil": "^4.0.1",
-    "erlpack": "^0.1.3",
     "utf-8-validate": "^5.0.2",
     "libsodium-wrappers": "^0.7.3",
-    "erlpack": "discordapp/erlpack"
   },
   "engines": {
-    "node": "v10.15.3"
-  },
-  "devDependencies": {
-    "discord.js-docgen": "discordjs/docgen",
-    "jest": "^25.0.0",
-    "jsdom": "^15.2.0",
-    "canvas": "^2.5.0",
-    "json-filter-loader": "^1.0.0",
-    "webpack": "4.x.x",
-    "webpack-cli": "^4.0.0-alpha-5"
-  },
-  "peerDependencies": {
-    "sodium": "^3.0.2",
-    "bufferutil": "^4.0.1",
-    "zlib-sync": "^0.1.6",
-    "zucc": "^0.2.0-b"
+    "node": "v8.x"
   },
   "scripts": {
     "start": "node index.js"
