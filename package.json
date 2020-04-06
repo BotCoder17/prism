@@ -56,7 +56,6 @@
     "webpack-cli": "^4.0.0-alpha-5"
   },
   "peerDependencies": {
-    "@discordjs/uws": "^11.149.1",
     "sodium": "^3.0.2",
     "bufferutil": "^4.0.1",
     "zlib-sync": "^0.1.6",
