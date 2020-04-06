@@ -2,7 +2,8 @@ const Discord = require("discord.js");
 const client = new Discord.Client({
     disableEveryone : true
 });
-const http = require('http');
+// const http = require('http');
+const https = require('https');
 const express = require('express');
 const app = express();
 app.get("/", (request, response) => {
@@ -10,8 +11,19 @@ app.get("/", (request, response) => {
 });
 app.listen(process.env.PORT);
 setInterval(() => {
-  http.get(`http://${process.env.PROJECT_DOMAIN}.glitch.me/`);
-}, 900000);
+  // http.get(`http://${process.env.PROJECT_DOMAIN}.glitch.me/`);
+  https.get('https://www.github.com/BotCoder17/svn-bot/', (res) => {
+     // console.log('statusCode:', res.statusCode);
+     // console.log('headers:', res.headers);
+
+    res.on('data', (d) => {
+       process.stdout.write(d);
+    });
+
+  }).on('error', (e) => {
+      console.error(e);
+  });
+}, 300000);
 
 client.login(process.env.TOKEN);
 const ownerID=process.env.OWNERID;
