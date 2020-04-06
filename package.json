@@ -1,7 +1,7 @@
 {
   "name": "s-bot",
   "version": "1.7.5",
-  "main": "index.js",
+  "main": "bot.js",
   "dependencies": {
     "discord.js": "^11.5.1",
     "request": "^2.88.2",
@@ -43,7 +43,7 @@
     "node": "v8.x"
   },
   "scripts": {
-    "start": "node index.js"
+    "start": "node bot.js"
   },
   "author": "someone",
   "license": "MIT",
