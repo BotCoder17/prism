@@ -38,7 +38,7 @@
     "@discordjs/opus": "^0.1.0",
     "bufferutil": "^4.0.1",
     "utf-8-validate": "^5.0.2",
-    "libsodium-wrappers": "^0.7.3",
+    "libsodium-wrappers": "^0.7.3"
   },
   "engines": {
     "node": "v8.x"
